@@ -58,6 +58,12 @@ class DashboardResponse(BaseModel):
     cards: list[DashboardCard]
 
 
+class ReviewerNoteEntry(TimestampedModel):
+    finding_id: str
+    note: str
+    override_status: FindingStatus | None = None
+
+
 class ReviewerNoteRequest(BaseModel):
     note: str = Field(min_length=3, max_length=4000)
     override_status: FindingStatus | None = None

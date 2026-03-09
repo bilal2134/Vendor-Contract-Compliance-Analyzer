@@ -1,0 +1,352 @@
+MASTER SERVICE AGREEMENT
+
+Agreement Number: MSA-2026-0047
+Effective Date: February 1, 2026
+Last Amended: March 1, 2026
+
+BETWEEN:
+  Greybeard Corporate Solutions, Inc., a Delaware corporation
+  ("Company" or "Client")
+  1200 Market Street, Suite 800, Wilmington, DE 19801
+
+AND:
+  NovaTech Solutions, LLC, a California limited liability company
+  ("Vendor" or "Service Provider")
+  2550 Innovation Drive, Suite 300, San Jose, CA 95134
+
+════════════════════════════════════════════════════════════════════════
+RECITALS
+════════════════════════════════════════════════════════════════════════
+
+WHEREAS, the Company desires to engage Vendor to provide certain
+technology and professional services as described in one or more
+Statements of Work ("SOWs") to be entered into from time to time;
+
+WHEREAS, Vendor has the expertise, personnel, and infrastructure to
+provide such services in accordance with applicable quality, security,
+and compliance standards;
+
+NOW, THEREFORE, in consideration of the mutual covenants herein and
+other good and valuable consideration, the parties agree as follows:
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 1 – SERVICES AND DELIVERABLES
+════════════════════════════════════════════════════════════════════════
+
+1.1  Services.  Vendor shall perform the services described in each
+SOW executed by authorized representatives of both parties. Each SOW
+shall be incorporated by reference and form part of this Agreement.
+
+1.2  Change Orders.  Any modification to agreed scope, timeline, or
+fees requires a written Change Order signed by both parties. Vendor
+shall not commence out-of-scope work without an executed Change Order.
+
+1.3  Personnel.  Vendor shall assign qualified personnel to perform
+the services. Key personnel identified in an SOW may not be replaced
+or reassigned without 15 days advance written notice to the Company and
+Company's written approval, which shall not be unreasonably withheld.
+
+1.4  Subcontracting.  Vendor shall not subcontract any portion of the
+services without prior written consent of the Company. Currently
+approved subcontractors are listed in Exhibit D. All subcontractors
+must be bound by obligations no less restrictive than those applicable
+to Vendor under this Agreement.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 2 – TERM AND TERMINATION
+════════════════════════════════════════════════════════════════════════
+
+2.1  Initial Term.  This Agreement commences on the Effective Date and
+continues for an initial term of 36 months ("Initial Term") unless
+earlier terminated in accordance with this Article 2.
+
+2.2  Renewal.  This Agreement shall automatically renew for successive
+12-month periods ("Renewal Terms") unless either party provides written
+notice of its intent not to renew at least 90 days before the expiration
+of the then-current term.
+
+2.3  Termination for Convenience.  Either party may terminate this
+Agreement or any SOW without cause by providing 60 days prior written
+notice to the other party. Upon receipt of such notice, Vendor shall
+continue providing services during the notice period unless otherwise
+directed by the Company. Fees for services properly rendered during
+the notice period shall be payable.
+
+2.4  Termination for Cause.  Either party may terminate this Agreement
+if the other party commits a material breach and fails to cure such
+breach within 30 days of receiving written notice specifying the breach
+in reasonable detail.
+
+2.5  Termination for Insolvency.  Either party may terminate this
+Agreement immediately upon written notice if the other party: (a)
+becomes insolvent; (b) makes a general assignment for the benefit of
+creditors; (c) has a receiver or trustee appointed; or (d) files or
+has filed against it a petition under applicable bankruptcy or
+insolvency law that is not dismissed within 60 days.
+
+2.6  Change of Control.  Vendor shall provide 90 days advance written
+notice of any anticipated change of control event. If the acquirer is a
+direct competitor of the Company as identified in Exhibit E (Competitor
+List), the Company may terminate this Agreement without penalty within
+60 days of change of control notice.
+
+2.7  Effect of Termination; Exit Assistance.  Upon termination or
+expiration of this Agreement: (a) Vendor shall provide up to 90 days
+of transition assistance at no additional charge upon request; (b) all
+licenses granted by the Company to Vendor terminate immediately; (c)
+each party shall return or destroy the other party's Confidential
+Information within 30 days of the termination effective date; (d) Vendor
+shall provide a Certificate of Data Destruction within 5 business days
+of completing data disposal.
+
+NOTE: The Company's standard termination-for-convenience notice period
+is 90 days as specified in the Procurement Policy Playbook Section 14.1.
+This Agreement reflects a negotiated 60-day period for operational
+flexibility. This deviation is recorded in Exception Log EX-2024-113
+and approved by CPO and Legal. Inconsistency with the 90-day Playbook
+standard is acknowledged and approved.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 3 – FEES AND PAYMENT
+════════════════════════════════════════════════════════════════════════
+
+3.1  Fees.  The Company shall pay Vendor the fees specified in each SOW.
+Unless otherwise stated in an SOW, fees quoted are in US Dollars and
+exclusive of applicable taxes.
+
+3.2  Invoicing and Payment.  Vendor shall issue invoices monthly in
+arrears. Invoices must reference the Company purchase order number and
+applicable SOW number. The Company shall pay undisputed invoices within
+Net-45 days of receipt.
+
+3.3  Late Payment.  Amounts undisputed and unpaid after Net-45 days
+shall accrue interest at 1.0% per month or the maximum rate permitted
+by applicable law, whichever is lower.
+
+3.4  Taxes.  Each party is responsible for its own income taxes.
+Vendor shall be responsible for collecting and remitting applicable
+sales or use taxes unless the Company provides a valid exemption
+certificate.
+
+3.5  Price Adjustment.  Fixed fees are not subject to unilateral
+adjustment during any SOW term. Time-and-materials rates may be
+adjusted annually on 90 days written notice, subject to a cap of
+CPI (All Urban Consumers) + 3 percentage points per annum.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 4 – INTELLECTUAL PROPERTY
+════════════════════════════════════════════════════════════════════════
+
+4.1  Work Product.  All custom deliverables created by Vendor
+specifically for the Company under a SOW shall be works-made-for-hire
+owned by the Company. Where any deliverable does not qualify as a
+work-made-for-hire under applicable law, Vendor hereby irrevocably
+assigns all right, title, and interest to the Company.
+
+4.2  Background IP.  Vendor retains ownership of its pre-existing
+intellectual property ("Background IP"). Vendor grants the Company a
+non-exclusive, perpetual, royalty-free, irrevocable license to use any
+Background IP embedded in deliverables to the extent necessary to use
+the deliverables as intended.
+
+4.3  Open Source.  Vendor shall provide a complete bill of materials
+listing all open source software components in any deliverable. Vendor
+warrants that no open source component imposes obligations inconsistent
+with the Company's commercial use, including no requirement to disclose
+proprietary source code (copyleft contamination).
+
+4.4  IP Indemnification.  Vendor shall indemnify and hold harmless the
+Company against third-party claims alleging that Vendor deliverables
+infringe any third party's intellectual property rights (patent,
+copyright, trademark, or trade secret).
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 5 – CONFIDENTIALITY
+════════════════════════════════════════════════════════════════════════
+
+5.1  Obligations.  Each party ("Recipient") shall: (a) hold the other
+party's Confidential Information in strict confidence using at least the
+same degree of care it uses for its own confidential information of
+similar sensitivity but no less than reasonable care; (b) use
+Confidential Information solely to perform obligations or exercise
+rights under this Agreement; (c) disclose Confidential Information only
+to employees, agents, and subcontractors who have a need to know and
+are bound by written confidentiality obligations at least as stringent
+as those in this Article 5.
+
+5.2  Exceptions.  Confidentiality obligations do not apply to
+information that: (a) is or becomes publicly known through no fault of
+the Recipient; (b) was known to Recipient before disclosure without
+restriction; (c) is independently developed by Recipient without use of
+Confidential Information; (d) is required to be disclosed by applicable
+law or court order (with prior notice to Disclosing Party where lawfully
+permitted).
+
+5.3  Survival.  Confidentiality obligations survive termination or
+expiration of this Agreement for five (5) years.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 6 – DATA PROTECTION
+════════════════════════════════════════════════════════════════════════
+
+6.1  DPA Incorporation.  The parties have executed a separate Data
+Processing Agreement ("DPA") dated February 1, 2026, which is
+incorporated by reference and forms part of this Agreement. In the
+event of conflict between this Agreement and the DPA regarding
+the processing of Personal Data, the DPA shall govern.
+
+6.2  Data Security.  Vendor shall implement and maintain technical and
+organizational security measures sufficient to protect Company Data
+against unauthorized access, disclosure, alteration, or destruction,
+consistent with the requirements of the DPA and Exhibit A (Security
+Standards).
+
+6.3  Security Certifications.  Vendor represents and warrants that it
+maintains a current SOC 2 Type II report issued by an accredited
+independent auditor. Vendor's current SOC 2 report (Period: October 1,
+2024 – September 30, 2025) is attached as Exhibit B. Vendor also holds
+ISO 27001:2022 certification, certificate number IS-2023-847291, valid
+through April 30, 2026. Vendor shall renew its ISO 27001 certification
+and provide updated certification evidence to the Company within
+15 business days of renewal.
+
+6.4  Breach Notification.  Vendor shall notify the Company within
+4 hours of discovering a Data Breach or suspected Data Breach involving
+Company Data in accordance with DPA Section 6.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 7 – REPRESENTATIONS AND WARRANTIES
+════════════════════════════════════════════════════════════════════════
+
+7.1  Vendor Warranties.
+  (a)  Professional Standards: Services will be performed in a
+       professionally skillful manner consistent with industry standards.
+  (b)  Compliance: Vendor and its personnel will comply with all
+       applicable laws and regulations governing performance of the services.
+  (c)  No Conflicts: Execution and performance of this Agreement does not
+       conflict with any other contract or obligation of Vendor.
+  (d)  Financial Stability: Vendor is a validly existing entity in good
+       standing and has no pending insolvency proceedings.
+  (e)  No Malware: Deliverables will not contain any malware, virus,
+       backdoor, or unauthorized data collection mechanism.
+  (f)  Security Certifications: Vendor will maintain required security
+       certifications throughout the term and promptly notify the Company
+       if any certification lapses.
+
+7.2  Mutual Warranties.  Each party warrants that: (a) it has full legal
+authority to execute this Agreement; (b) the person executing this
+Agreement is duly authorized; (c) it will comply with applicable laws.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 8 – LIMITATION OF LIABILITY
+════════════════════════════════════════════════════════════════════════
+
+8.1  Consequential Damages Waiver.  EXCEPT FOR BREACHES OF ARTICLE 5
+(CONFIDENTIALITY), INTELLECTUAL PROPERTY INFRINGEMENT, GROSS
+NEGLIGENCE, OR WILLFUL MISCONDUCT, NEITHER PARTY SHALL BE LIABLE FOR
+INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY
+DAMAGES, INCLUDING LOSS OF PROFITS OR BUSINESS OPPORTUNITIES.
+
+8.2  Aggregate Cap.  Except for the categories excluded in Section 8.1,
+each party's aggregate liability arising under or related to this
+Agreement shall not exceed the total fees paid or payable by the Company
+to Vendor in the 12 months immediately preceding the event giving rise
+to the claim. For Vendor's liability arising from Data Breaches and
+IP infringement, the aggregate cap is the greater of: (a) 12-month
+trailing fees, or (b) USD $5,000,000.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 9 – INSURANCE
+════════════════════════════════════════════════════════════════════════
+
+9.1  Required Coverages.  During the term of this Agreement and for
+two (2) years thereafter (to the extent commercially available on a
+claims-made basis), Vendor shall maintain the following insurance:
+  (a)  Commercial General Liability: USD $2,000,000 per occurrence /
+       USD $4,000,000 aggregate. Company is named as Additional Insured.
+  (b)  Cyber Liability and Technology E&O: USD $5,000,000 per occurrence /
+       USD $5,000,000 aggregate. Coverage includes first-party breach
+       response, third-party liability, and regulatory defense.
+       NOTE: See Exhibit C Insurance Requirements — the Company's
+       Procurement Playbook (Section 7.1.2) requires USD $10,000,000
+       aggregate for Tier 1 vendors. NovaTech is classified as Tier 2
+       for insurance purposes effective this Agreement; Cyber coverage
+       is set accordingly at USD $5,000,000 aggregate. If NovaTech
+       is reclassified to Tier 1, coverage limits must be increased
+       within 60 days of reclassification notice.
+  (c)  Workers' Compensation: Statutory limits.
+  (d)  Professional Liability (E&O): USD $2,000,000 per claim /
+       USD $2,000,000 aggregate.
+
+9.2  Evidence of Insurance.  Vendor shall furnish ACORD 25 certificates
+of insurance to the Company before execution of this Agreement and
+within 5 business days of each annual policy renewal. Certificates
+shall evidence Additional Insured endorsements as required.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 10 – GENERAL PROVISIONS
+════════════════════════════════════════════════════════════════════════
+
+10.1  Governing Law.  This Agreement shall be governed by the laws of
+the State of Delaware without regard to its conflict of law principles.
+
+10.2  Dispute Resolution.  Disputes below USD $250,000 shall be
+submitted to AAA Commercial Arbitration (Delaware rules). Disputes at or
+above USD $250,000 may be litigated in federal or state courts of Delaware.
+
+10.3  Entire Agreement.  This Agreement, together with all executed SOWs,
+the DPA, and the Company's Procurement Policy Playbook (as incorporated
+herein by reference), constitutes the entire agreement of the parties and
+supersedes all prior negotiations, representations, and understandings.
+
+10.4  Amendments.  Amendments require written agreement signed by
+authorized representatives of both parties.
+
+10.5  Severability.  If any provision is held unenforceable, the
+remaining provisions continue in full force and effect.
+
+10.6  Waiver.  Failure by either party to enforce any provision of this
+Agreement shall not constitute a waiver of future enforcement rights.
+
+10.7  Notices.  All formal notices must be sent by certified mail or
+overnight courier to the addresses in the preamble, or via email to
+legal@greybeard.com (Company) and legal@novatechsolutions.com (Vendor).
+
+10.8  Force Majeure.  Neither party shall be liable for delays or
+failures caused by events beyond its reasonable control (natural
+disaster, war, pandemic, government action), provided it gives prompt
+notice and uses reasonable efforts to mitigate the impact.
+
+10.9  Anti-Corruption.  Vendor represents and warrants compliance with
+all applicable anti-bribery and anti-corruption laws, including the
+US FCPA and the UK Bribery Act 2010.
+
+10.10  Export Controls.  Vendor shall comply with all applicable US and
+international export control laws and shall not export, re-export, or
+transfer Company technology in violation of such laws.
+
+Executed as of the dates below by duly authorized representatives:
+
+GREYBEARD CORPORATE SOLUTIONS, INC.
+
+By: ______________________________
+Name: Margaret R. Hollis
+Title: Chief Procurement Officer
+Date: February 1, 2026
+
+NOVATECH SOLUTIONS, LLC
+
+By: ______________________________
+Name: David K. Nguyen
+Title: Chief Executive Officer
+Date: February 1, 2026
+
+════════════════════════════════════════════════════════════════════════
+EXHIBIT LIST
+════════════════════════════════════════════════════════════════════════
+Exhibit A – Vendor Security Standards (by reference to DPA Annex II)
+Exhibit B – SOC 2 Type II Report Summary (Period: Oct 2024 – Sep 2025)
+Exhibit C – Insurance Requirements Schedule
+Exhibit D – Approved Subcontractors
+Exhibit E – Competitor List (Confidential)
+Exhibit F – Data Processing Agreement (separate document)

@@ -24,3 +24,11 @@ Thumbs.db
 coverage/
 dist/
 *.log
+
+# Generated runtime storage (SQLite DB + Chroma vector store + uploaded files)
+# Clear and regenerate locally; never commit to source control
+storage/
+!storage/.gitkeep
+
+# Smoke-test scratch files
+smoke-*.txt

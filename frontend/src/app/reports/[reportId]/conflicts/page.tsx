@@ -13,7 +13,7 @@ export default async function ConflictsPage({ params }: { params: Promise<{ repo
 
   return (
     <main className="stack-lg">
-      <section className="hero">
+      <section className="hero hero-report">
         <span className="kicker">Conflict review</span>
         <div className="stack-md">
           <h1>{report.vendor_name} conflict workspace</h1>
@@ -37,14 +37,16 @@ export default async function ConflictsPage({ params }: { params: Promise<{ repo
               <h2>{conflict.title}</h2>
               <p>{conflict.summary}</p>
             </div>
-            <div className="grid grid-2">
-              <div className="muted-surface">
+            <div className="grid grid-2 conflict-grid">
+              <div className="muted-surface conflict-side">
                 <strong>{conflict.left_citation.source_name}</strong>
                 <p>{conflict.left_citation.excerpt}</p>
+                <span className="eyebrow">{conflict.left_citation.section ?? "No section"}</span>
               </div>
-              <div className="muted-surface">
+              <div className="muted-surface conflict-side">
                 <strong>{conflict.right_citation.source_name}</strong>
                 <p>{conflict.right_citation.excerpt}</p>
+                <span className="eyebrow">{conflict.right_citation.section ?? "No section"}</span>
               </div>
             </div>
           </article>

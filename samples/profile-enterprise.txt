@@ -1,0 +1,326 @@
+COMPANY PROFILE AND REFERENCES
+Vendor: NovaTech Solutions, LLC
+Prepared for: Greybeard Corporate Solutions, Inc.
+Document Date: January 10, 2026
+Prepared by: Marcus Webb, VP of Sales Engineering
+Contact: mwebb@novatechsolutions.com | +1 (408) 555-0209
+
+════════════════════════════════════════════════════════════════════════
+SECTION 1 – CORPORATE OVERVIEW
+════════════════════════════════════════════════════════════════════════
+
+1.1  Company Identity
+     Full Legal Name:      NovaTech Solutions, LLC
+     Trade Name:           NovaTech
+     Entity Type:          Limited Liability Company
+     Jurisdiction:         Delaware (registered), headquartered in California
+     EIN:                  47-2830154
+     DUNS Number:          078234561
+     CAGE Code:            8QTV7
+
+     Registered Address:
+       2550 Innovation Drive, Suite 300
+       San Jose, CA 95134
+
+     Billing / Correspondence:
+       Same as above; billing inquiries: ar@novatechsolutions.com
+
+1.2  Founded and Leadership
+     Year Founded:         2009
+     Headquarters:         San Jose, California, USA
+     Additional Offices:   Austin TX, New York NY, London UK, Singapore
+
+     Executive Leadership Team:
+       David K. Nguyen        Chief Executive Officer
+       Priya Sharma           Chief Information Security Officer
+       Rachel Torres          Chief Financial Officer
+       James O'Brien          Chief Technology Officer
+       Prakash Mehta          Data Protection Officer & VP Legal Affairs
+       Sandra Kim             Chief Operating Officer
+
+1.3  Company Size and Financial Standing
+     Total Employees:      1,847 (full-time equivalent, as of January 2026)
+     Engineering Staff:    690
+     Security Staff:       28 (dedicated; see Security Questionnaire §A.2)
+     Revenue (FY2025):     USD $342 million (unaudited; audited financials
+                           available under NDA)
+     Profitability:        Profitable since FY2019; EBITDA margin 18% FY2025
+     Funding:              Bootstrapped through Series B (2018); cash flow
+                           positive; no venture debt outstanding.
+     Credit Rating:        Not rated (private company). Audited financials
+                           available upon request under NDA.
+     Banking Relationships: Bank of America (primary); JP Morgan Chase
+     External Auditor:     KPMG LLP (since FY2021)
+     No pending or threatened insolvency proceedings, material litigation,
+     or regulatory investigations as of the date of this document.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 2 – SERVICE OFFERINGS AND TECHNICAL CAPABILITIES
+════════════════════════════════════════════════════════════════════════
+
+2.1  Core Product Lines
+     (a)  NovaTech Analytics Cloud™ — SaaS workforce analytics and
+          business intelligence platform. Integrates with major HRIS
+          (Workday, SAP SuccessFactors, Oracle HCM), ERP (SAP, Oracle
+          EBS), and CRM (Salesforce) systems.
+     (b)  NovaTech Integrate™ — Enterprise data integration and ETL
+          pipeline platform. Supports REST/SOAP APIs, EDI X12, SFTP,
+          database-to-database, and ERP connectors.
+     (c)  NovaTech Workflow™ — Intelligent workflow automation and
+          business process management, including approval workflows,
+          document routing, and audit trail management.
+     (d)  Professional Services — Implementation consulting, data
+          migration, custom integration development, and managed
+          services.
+
+2.2  Technology Stack
+     Cloud Platform:       AWS (primary), Azure (secondary for EU workloads)
+     Database:             PostgreSQL 16, Snowflake (analytics), Redis (cache)
+     Programming:          Python, Java 21, Node.js, TypeScript
+     Container Platform:   Kubernetes (EKS), Helm, Argo CD (GitOps)
+     Observability:        Datadog APM, PagerDuty, AWS CloudWatch
+     SIEM:                 Splunk Enterprise Security
+     Secret Management:    HashiCorp Vault
+
+2.3  Integration Capabilities
+     APIs:                 REST (OpenAPI 3.1), GraphQL, gRPC
+     Connectors:           150+ pre-built connectors available
+     File Formats:         CSV, JSON, XML, Parquet, Avro, ORC
+     EDI Standards:        EDI X12, EDIFACT
+     Data Protocols:       SFTP, FTPS, HTTPS, AS2, Kafka, AMQP
+
+════════════════════════════════════════════════════════════════════════
+SECTION 3 – SERVICE LEVEL COMMITMENTS
+════════════════════════════════════════════════════════════════════════
+
+3.1  Platform Availability SLA
+
+     NovaTech Analytics Cloud™ Production SLA:
+       Target Availability:   99.95% measured monthly
+       Measurement Window:    Calendar month
+       Exclusions:            Scheduled maintenance windows communicated
+                              72+ hours in advance; force majeure events;
+                              outages lasting < 5 minutes.
+       Service Credits:
+         < 99.95% – ≥ 99.5%:  5% monthly fee credit
+         < 99.5%  – ≥ 99.0%:  10% monthly fee credit
+         < 99.0%  – ≥ 95.0%:  25% monthly fee credit
+         < 95.0%:              50% monthly fee credit; termination right
+                               after 2 consecutive months
+
+     NovaTech Integrate™ Production SLA:
+       Target Availability:   99.9% measured monthly
+       Same credit regime as above.
+
+     Status Page:            status.novatechsolutions.com (real-time)
+     Historical Uptime (FY2025): Analytics Cloud 99.97%; Integrate 99.94%
+
+3.2  Performance Standards
+     API Response Time (P95):  < 400ms for read operations
+                                < 800ms for complex aggregation queries
+     Batch Processing:         10M records per hour (standard tier)
+     Data Freshness SLA:       Near-real-time sync ≤ 90 seconds latency
+                               (premium tier)
+
+3.3  Support Tiers
+
+     Tier        Response SLA     Availability    Dedicated CSM
+     ──────────────────────────────────────────────────────────
+     Enterprise  15 min Critical  24/7/365        Yes
+                 2 hr High
+                 8 hr Standard
+     Premium     30 min Critical  24/7/365        Yes
+                 4 hr High
+     Standard    4 hr Critical    Business hours  No
+     ──────────────────────────────────────────────────────────
+     Greybeard will be onboarded at Enterprise tier per SOW-2026-001.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 4 – TERMINATION AND TRANSITION PROVISIONS
+════════════════════════════════════════════════════════════════════════
+
+4.1  Termination Notice Period
+     NovaTech's standard commercial terms require 60 days written notice
+     for termination for convenience by either party. This is consistent
+     with Article 2.3 of MSA-2026-0047 signed with Greybeard.
+
+     CLIENT ADVISORY: Greybeard's Procurement Policy Playbook (Section
+     14.1) specifies a standard 90-day termination-for-convenience notice
+     period. The Greybeard Legal team has reviewed and approved a 60-day
+     notice period for this engagement under Exception Log EX-2024-113.
+     Both parties acknowledge this deviation from Playbook standard.
+
+     For termination for cause (material breach): 30-day cure period
+     applies, consistent with MSA Article 2.4.
+
+4.2  Exit Assistance and Data Portability
+     Upon receipt of a termination notice, NovaTech will provide:
+     (a)  90 days of complimentary transition assistance, including
+          data export in client-specified formats (CSV, JSON, Parquet,
+          Excel), API access for bulk data extraction, and workflow
+          documentation transfer.
+     (b)  Integration specification documentation for all active connectors.
+     (c)  3 knowledge transfer sessions (2 hours each) with the
+          implementation and data engineering teams.
+     (d)  Cooperation with successor vendor onboarding, including joint
+          sessions as reasonably requested.
+
+4.3  Data Deletion Certificate
+     Following complete data export and expiry of the 30-day post-
+     termination retention window, NovaTech's DPO will issue a signed
+     Certificate of Data Destruction per DPA Article 9.4 within
+     5 business days of deletion completion.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 5 – REFERENCE CUSTOMERS
+════════════════════════════════════════════════════════════════════════
+
+NovaTech Solutions provides services to 847 enterprise customers across
+28 countries. The following references have provided written consent to
+be contacted by Greybeard Corporate Solutions in connection with this
+RFP/evaluation:
+
+Reference 1 – Financial Services
+  Company:     Meridian Capital Partners (name anonymized pending consent refresh)
+  Industry:    Investment banking and asset management
+  Employees:   12,000+
+  Services:    NovaTech Analytics Cloud, NovaTech Integrate
+  Duration:    Client since 2019 (7 years)
+  Contact:     Available through mwebb@novatechsolutions.com
+  Highlights:  Deployed across 5 global entities; 99.98% uptime in FY2025;
+               SOC 2 and ISO 27001 compliance confirmed and audited.
+
+Reference 2 – Healthcare / Life Sciences
+  Company:     BioMetric Diagnostics, Inc.
+  Industry:    Clinical diagnostics and laboratory services
+  Employees:   7,400
+  Services:    NovaTech Workflow, NovaTech Analytics Cloud
+  Duration:    Client since 2021 (5 years)
+  Contact:     cto@biometricdiag.com (confirmed available for reference)
+  Highlights:  HIPAA-compliant deployment; HITRUST CSF assessment passed;
+               Zero compliance incidents in 5 years of service.
+
+Reference 3 – Retail / E-Commerce
+  Company:     Nexus Retail Group
+  Industry:    Omni-channel retail
+  Employees:   45,000 (global)
+  Services:    NovaTech Integrate (ERP+CRM), Analytics Cloud
+  Duration:    Client since 2020 (6 years)
+  Contact:     Available through mwebb@novatechsolutions.com
+  Highlights:  Processing 25M+ transactions/month; PCI DSS compliant
+               environment; 99.99% pipeline availability in FY2025.
+
+Reference 4 – Regulated Financial Services (UK)
+  Company:     Harrington & Whitmore Asset Management (UK) Ltd
+  Industry:    Investment management (FCA regulated)
+  Employees:   2,200
+  Services:    NovaTech Analytics Cloud (UK deployment)
+  Duration:    Client since 2022 (4 years)
+  Contact:     Available upon request
+  Highlights:  UK GDPR and FCA compliance; data hosted EU-West-1 only;
+               annual ISO 27001 and SOC 2 audits reviewed annually.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 6 – CERTIFICATIONS AND REGISTRATIONS
+════════════════════════════════════════════════════════════════════════
+
+6.1  Security Certifications (see also Security Questionnaire)
+     SOC 2 Type II:         Current (Deloitte; period Oct 2024 – Sep 2025)
+     ISO 27001:2022:        Current (BSI cert IS-2023-847291, valid Apr 2026)
+     PCI DSS:               SAQ-D, current (Dec 2025)
+
+6.2  Business Registrations
+     State of Delaware:     Active LLC, File No. 4833920 (formed Oct 2009)
+     California:            SOS File No. 200928610237 (foreign qualified)
+     US Federal:            EIN 47-2830154; no debarment on SAM.gov
+     UK:                    NovaTech Solutions (UK) Ltd, Company No. 10847325
+     Singapore:             NovaTech Solutions Pte. Ltd., UEN 201935824G
+
+6.3  Minority/Diversity Certification
+     NovaTech is a certified Minority Business Enterprise (MBE) through
+     the National Minority Supplier Development Council (NMSDC).
+     Certificate No. CA-MBE-2025-04817, valid through December 31, 2026.
+
+6.4  Regulatory Compliance Status
+     OFAC/Sanctions:       No designations. Last screened January 5, 2026.
+     Export Controls:      EAR/ITAR compliant. No ITAR-controlled products.
+     Anti-Corruption:      FCPA / UK Bribery Act compliance training current.
+     Debarment (GSA):      Not listed on SAM.gov excluded parties.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 7 – SUBCONTRACTING AND SUPPLY CHAIN
+════════════════════════════════════════════════════════════════════════
+
+7.1  NovaTech's primary approved subcontractors for Greybeard services:
+
+     Subcontractor           Role                         DPA in Place?
+     ────────────────────────────────────────────────────────────────
+     Amazon Web Services     Cloud infrastructure         Yes
+     Snowflake Inc.          Data warehousing             Yes
+     Twilio SendGrid         Email delivery               Yes
+     Zendesk Inc.            Support ticketing            Yes
+     PagerDuty Inc.          Incident alerting            Yes
+     ────────────────────────────────────────────────────────────────
+     All subcontractors listed above are subject to DPAs with obligations
+     equivalent to those imposed on NovaTech under the Greybeard DPA.
+     NovaTech provides 30 days written notice before adding new subprocessors.
+
+7.2  Fourth-Party Disclosure
+     AWS relies on its own infrastructure suppliers (hardware, facility
+     operators, power, and network providers) who are governed by AWS's
+     Shared Responsibility Model and AWS Security Addendum. AWS's fourth-
+     party controls are detailed in the AWS Compliance Program documentation
+     at aws.amazon.com/compliance. NovaTech leverages AWS's SOC 2 and
+     ISO 27001 reports to satisfy fourth-party risk obligations.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 8 – ETHICS AND GOVERNANCE
+════════════════════════════════════════════════════════════════════════
+
+8.1  Code of Conduct: Published publicly at novatechsolutions.com/ethics.
+     Covers: anti-bribery, conflicts of interest, fair competition,
+     human rights, environmental responsibility, and whistleblower protections.
+
+8.2  Whistleblower Hotline: ethics@novatechsolutions.com; anonymous reporting
+     available at EthicsPoint portal. Zero retaliation policy enforced.
+
+8.3  ESG Commitments:
+     Carbon neutral (Scope 1 and 2) since 2023; Scope 3 disclosure in
+     progress. Member of the UN Global Compact since 2022.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 9 – FINANCIAL REFERENCES
+════════════════════════════════════════════════════════════════════════
+
+Key banking and trade reference contacts available upon execution of an
+NDA. NovaTech will provide audited FY2025 financial statements (expected
+completion April 2026) within 30 days of availability to Tier 1 and
+Tier 2 customers with signed confidentiality agreements.
+
+Preliminary unaudited FY2025 highlights:
+  Annual Recurring Revenue (ARR):   USD $298 million
+  Gross Margin:                     72%
+  Net Revenue Retention:            118%
+  Customer Count:                   847 enterprise customers
+  Churn Rate:                       2.1% annual (logo churn)
+  Cash and Equivalents:             USD $54 million (no long-term debt)
+
+════════════════════════════════════════════════════════════════════════
+VENDOR ATTESTATION
+════════════════════════════════════════════════════════════════════════
+
+I, the undersigned, hereby attest that the information provided in this
+Company Profile and References document is accurate and complete to the
+best of my knowledge as of the document date stated above.
+
+Marcus Webb
+Vice President, Sales Engineering
+NovaTech Solutions, LLC
+mwebb@novatechsolutions.com | +1 (408) 555-0209
+January 10, 2026
+
+Co-attested:
+David K. Nguyen
+Chief Executive Officer
+NovaTech Solutions, LLC
+January 10, 2026

@@ -119,6 +119,21 @@ p {
   font-size: 2rem;
 }
 
+.metric-helper {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.metric-critical {
+  background: linear-gradient(180deg, rgba(143, 45, 25, 0.08), var(--panel));
+}
+
+.metric-accent {
+  background: linear-gradient(180deg, rgba(13, 92, 99, 0.09), var(--panel));
+}
+
 .badge {
   display: inline-flex;
   align-items: center;
@@ -186,6 +201,54 @@ p {
   border-radius: 16px;
 }
 
+.finding-glance-grid,
+.report-banner-grid,
+.report-overview-grid,
+.conflict-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.finding-glance-grid,
+.report-banner-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.spotlight-card {
+  padding: 18px;
+  border-radius: 20px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.44), rgba(255, 255, 255, 0.08));
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.spotlight-card strong {
+  display: block;
+  margin: 8px 0 6px;
+  font-size: 2.3rem;
+}
+
+.spotlight-critical {
+  background: linear-gradient(180deg, rgba(143, 45, 25, 0.18), rgba(255, 255, 255, 0.1));
+}
+
+.hero-report {
+  background:
+    linear-gradient(135deg, rgba(13, 92, 99, 0.14), rgba(255, 255, 255, 0.28)),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.8), rgba(255, 251, 244, 0.92));
+}
+
+.grouped-section {
+  padding-top: 8px;
+}
+
+.grouped-header h3 {
+  margin: 6px 0 0;
+}
+
+.conflict-side {
+  min-height: 180px;
+}
+
 .severity-critical {
   border-color: rgba(143, 45, 25, 0.25);
 }
@@ -240,6 +303,16 @@ p {
   font: inherit;
 }
 
+.field-area {
+  min-height: 120px;
+  padding: 14px;
+  resize: vertical;
+}
+
+.file-field {
+  padding: 10px 14px;
+}
+
 label span {
   color: var(--muted);
 }
@@ -259,7 +332,11 @@ label span {
 
 @media (max-width: 900px) {
   .grid-3,
-  .grid-2 {
+  .grid-2,
+  .finding-glance-grid,
+  .report-banner-grid,
+  .report-overview-grid,
+  .conflict-grid {
     grid-template-columns: 1fr;
   }
 

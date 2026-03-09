@@ -72,7 +72,16 @@ export interface DashboardCard {
   report_id: string | null;
 }
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://127.0.0.1:8000/api";
+export const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL ?? "http://127.0.0.1:8000/api";
+
+export interface PlaybookSummary {
+  version_id: string;
+  name: string;
+  effective_date: string;
+  description: string | null;
+  requirement_count: number;
+  status: string;
+}
 
 async function request<T>(path: string, init?: RequestInit): Promise<T> {
   const response = await fetch(`${API_BASE_URL}${path}`, {
@@ -97,4 +106,8 @@ export function getDashboard(): Promise<{ cards: DashboardCard[] }> {
 
 export function getReport(reportId: string): Promise<PackageReport> {
   return request(`/reports/${reportId}`);
+}
+
+export function getPlaybooks(): Promise<{ items: PlaybookSummary[] }> {
+  return request("/ingestion/playbooks");
 }

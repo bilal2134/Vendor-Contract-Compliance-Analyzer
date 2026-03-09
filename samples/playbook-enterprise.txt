@@ -1,0 +1,727 @@
+GREYBEARD CORPORATE SOLUTIONS
+VENDOR PROCUREMENT POLICY PLAYBOOK
+Version 4.2 | Effective Date: January 1, 2026
+Classification: Internal – Procurement & Legal
+
+════════════════════════════════════════════════════════════════════════
+TABLE OF CONTENTS
+════════════════════════════════════════════════════════════════════════
+
+1.  PURPOSE AND SCOPE
+2.  DEFINITIONS
+3.  GOVERNANCE AND APPROVAL THRESHOLDS
+4.  MASTER SERVICE AGREEMENT REQUIREMENTS
+5.  DATA PROTECTION AND PRIVACY
+6.  INFORMATION SECURITY REQUIREMENTS
+7.  INSURANCE AND FINANCIAL ASSURANCE
+8.  BUSINESS CONTINUITY AND DISASTER RECOVERY
+9.  SUBCONTRACTING AND SUPPLY CHAIN RISK
+10. EXPORT CONTROLS AND REGULATORY COMPLIANCE
+11. ANTI-CORRUPTION AND ETHICS
+12. SERVICE LEVELS AND PERFORMANCE STANDARDS
+13. AUDIT RIGHTS AND MONITORING
+14. TERMINATION AND EXIT MANAGEMENT
+15. DOCUMENT RETENTION AND RECORDS MANAGEMENT
+16. ENFORCEMENT AND EXCEPTIONS PROCESS
+
+════════════════════════════════════════════════════════════════════════
+SECTION 1 – PURPOSE AND SCOPE
+════════════════════════════════════════════════════════════════════════
+
+1.1  Purpose
+This Procurement Policy Playbook ("Playbook") establishes the minimum
+contractual, operational, and compliance requirements that every vendor
+providing goods or services to Greybeard Corporate Solutions ("Company")
+must satisfy before onboarding and on a continuous basis throughout the
+engagement. The Playbook applies to all third-party relationships with
+total contract value exceeding USD $50,000 or any engagement that
+involves access to Company systems, data, or facilities regardless of
+value.
+
+1.2  Scope of Application
+This Playbook applies to:
+  (a)  Information Technology and Software-as-a-Service vendors
+  (b)  Professional services firms (consulting, legal, accounting)
+  (c)  Cloud infrastructure and hosting providers
+  (d)  Data processing and analytics service providers
+  (e)  Managed security service providers (MSSPs)
+  (f)  Any subcontractor performing services that account for more than
+       20% of a prime vendor's deliverables under a Company contract.
+
+1.3  Hierarchy of Documents
+Where a vendor engagement involves multiple governing documents, the
+order of precedence shall be: (1) applicable law and regulation,
+(2) this Playbook as incorporated by reference into the executed MSA,
+(3) the signed MSA, (4) any applicable Statement of Work or Order Form,
+(5) vendor standard terms and conditions. In the event of conflict,
+higher-ranked documents prevail.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 2 – DEFINITIONS
+════════════════════════════════════════════════════════════════════════
+
+"Affiliate" means any entity that directly or indirectly controls, is
+controlled by, or is under common control with a party.
+
+"Company Data" means any data, records, or information owned by or
+entrusted to the Company, including Personal Data, financial records,
+intellectual property, trade secrets, and Confidential Information.
+
+"Confidential Information" means non-public information disclosed by
+one party to the other that is designated confidential or that would
+reasonably be understood to be confidential given the nature of the
+disclosure.
+
+"Critical Vendor" means a vendor whose failure to deliver would cause
+material operational disruption to Company business operations. The
+Vendor Risk Committee designates Critical Vendor status annually.
+
+"Data Breach" means any unauthorized access to, disclosure of, or
+destruction of Personal Data or Confidential Information, whether
+accidental or deliberate.
+
+"Personal Data" has the meaning ascribed to it under applicable
+privacy law, including but not limited to the California Consumer
+Privacy Act (CCPA), the EU General Data Protection Regulation
+(GDPR), and the UK Data Protection Act 2018.
+
+"Sensitive Personal Data" means Personal Data revealing racial or
+ethnic origin, political opinions, religious or philosophical beliefs,
+trade union membership, genetic or biometric data, health data, data
+concerning a natural person's sex life or sexual orientation, or
+precise geolocation data.
+
+"SLA" means Service Level Agreement, a schedule or exhibit setting
+measurable performance commitments by the vendor.
+
+"SOW" means Statement of Work, a discrete project or service scope
+document executed under the MSA.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 3 – GOVERNANCE AND APPROVAL THRESHOLDS
+════════════════════════════════════════════════════════════════════════
+
+3.1  Vendor Classification Tiers
+
+  Tier 1 – Strategic Partner  (TCV > USD $5M or Critical Vendor status)
+    Approval: Chief Procurement Officer + General Counsel + CISO
+    Review cycle: Annual comprehensive risk assessment
+
+  Tier 2 – Preferred Vendor   (TCV USD $500K – $5M)
+    Approval: VP Procurement + Legal Counsel
+    Review cycle: Annual self-assessment questionnaire
+
+  Tier 3 – Approved Vendor    (TCV USD $50K – $500K)
+    Approval: Director of Procurement
+    Review cycle: Biennial risk review
+
+3.2  Exceptions and Escalations
+Any exception to a Tier 1 requirement must be approved in writing by
+the Chief Procurement Officer and the Chief Information Security
+Officer. Exceptions shall be documented in the Vendor Risk Register
+with a specific remediation timeline not to exceed 180 days.
+
+3.3  Disqualification Criteria
+Vendors shall be disqualified from consideration if they appear on:
+  (a)  OFAC Specially Designated Nationals list
+  (b)  EU Consolidated Sanctions list
+  (c)  Any applicable export control debarment list
+  (d)  GSA Excluded Parties List System (EPLS)
+
+════════════════════════════════════════════════════════════════════════
+SECTION 4 – MASTER SERVICE AGREEMENT REQUIREMENTS
+════════════════════════════════════════════════════════════════════════
+
+4.1  Mandatory MSA Clauses
+Every MSA with a vendor covered by this Playbook must contain the
+following provisions as non-negotiable terms:
+
+  4.1.1  Governing Law and Jurisdiction
+         All MSAs shall be governed by the laws of the State of Delaware,
+         United States. Disputes below USD $250,000 shall be resolved by
+         AAA Commercial Arbitration. Disputes at or above USD $250,000 may
+         be litigated in federal or state courts of Delaware.
+
+  4.1.2  Entire Agreement and Integration Clause
+         The MSA, together with its exhibits and incorporated Playbook
+         requirements, constitutes the entire agreement and supersedes all
+         prior negotiations and representations.
+
+  4.1.3  Assignment
+         Vendors may not assign, transfer, or delegate any rights or
+         obligations under the MSA without prior written consent of the
+         Company, which shall not be unreasonably withheld. Any purported
+         assignment in violation of this clause is null and void.
+
+  4.1.4  Change of Control
+         Vendor must provide at least 90 days advance written notice of a
+         planned change of control event (merger, acquisition, sale of
+         substantially all assets). The Company shall have the right to
+         terminate the MSA without penalty within 60 days of such notice
+         if the acquirer is a direct competitor of the Company.
+
+  4.1.5  Limitation of Liability
+         For Tier 1 vendors: Company's aggregate liability is capped at
+         total fees paid in the 12 months preceding the claim. Vendor's
+         aggregate liability is capped at the greater of: (a) total fees
+         paid in the 12 months preceding the claim, or (b) USD $5,000,000.
+         Liability caps do not apply to: breaches of confidentiality,
+         intellectual property infringement, data breaches, gross
+         negligence, or intentional misconduct.
+
+  4.1.6  Warranty
+         Vendor warrants that: (a) services will be performed in a
+         professional and workmanlike manner consistent with industry
+         standards; (b) deliverables will conform to agreed specifications
+         for 90 days after acceptance; (c) vendor has the right to grant
+         all licenses required by the MSA; (d) services and deliverables
+         will not contain malware, back doors, or undisclosed data
+         collection mechanisms.
+
+  4.1.7  Indemnification
+         Vendor shall indemnify, defend, and hold harmless the Company
+         against third-party claims arising from: (a) vendor's gross
+         negligence or willful misconduct; (b) infringement of intellectual
+         property rights by vendor deliverables; (c) vendor's violation of
+         applicable law; (d) any Data Breach caused by vendor's acts or
+         omissions.
+
+4.2  Commercial Terms
+
+  4.2.1  Payment Terms
+         Standard payment terms are Net-45 days from receipt of a
+         compliant invoice. Invoices must reference the Company purchase
+         order number and SOW number. Late payment interest is capped at
+         the lesser of 1.5% per month or the maximum rate permitted by law.
+
+  4.2.2  Price Stability
+         Fixed-price engagements are not subject to unilateral price
+         adjustments during the agreed term. Time-and-materials rates
+         may be adjusted annually with 90 days written notice, capped at
+         the prior year's change in the US Consumer Price Index (All Urban
+         Consumers) plus 2 percentage points.
+
+  4.2.3  Most Favored Customer
+         For Tier 1 vendors, the Company shall be entitled to pricing no
+         less favorable than the lowest pricing offered to any other
+         customer with comparable volume and contractual commitments.
+
+4.3  Intellectual Property
+
+  4.3.1  Work Product Ownership
+         All custom deliverables, inventions, works of authorship, and
+         developments created specifically for the Company under a SOW
+         shall be deemed works-made-for-hire and shall be owned by the
+         Company. To the extent any such deliverable is not deemed a
+         work-made-for-hire by operation of law, vendor hereby assigns
+         all right, title, and interest to the Company.
+
+  4.3.2  Background IP License
+         Vendor grants the Company a non-exclusive, royalty-free,
+         perpetual, irrevocable license to use vendor's pre-existing
+         intellectual property embedded in deliverables to the extent
+         necessary to use and exploit the deliverables.
+
+  4.3.3  Open Source Disclosure
+         Vendor must disclose all open source software components
+         incorporated into deliverables and confirm that no open source
+         license terms impose requirements inconsistent with the Company's
+         commercial use of the deliverables.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 5 – DATA PROTECTION AND PRIVACY
+════════════════════════════════════════════════════════════════════════
+
+5.1  Data Processing Agreement (DPA) Requirement
+     POLICY REQUIREMENT §5.1: Every vendor that processes, stores,
+     transmits, or may access Company Personal Data must execute a
+     Data Processing Agreement before any Personal Data is shared.
+     The DPA must satisfy the requirements of GDPR Article 28,
+     CCPA Section 1798.100 et seq., and any other applicable privacy law.
+     Execution of a DPA is a condition precedent to contract signature
+     and vendor onboarding.
+
+5.2  Data Processing Principles
+     Vendors must contractually commit to processing Personal Data:
+  (a)  Only on documented instructions from the Company
+  (b)  For no purpose other than the contracted service
+  (c)  With appropriate technical and organizational security measures
+  (d)  Only by personnel subject to enforceable confidentiality obligations
+  (e)  In compliance with applicable privacy regulations
+
+5.3  Cross-Border Data Transfers
+     Transfers of EU-origin Personal Data outside the European Economic
+     Area require one of the following legal mechanisms:
+  (a)  Standard Contractual Clauses (SCCs) as updated June 2021, or
+  (b)  Adequacy decision by the European Commission, or
+  (c)  Binding Corporate Rules approved by a supervisory authority.
+     Vendors relying on SCCs must complete a Transfer Impact Assessment
+     (TIA) and make it available to the Company on request.
+
+5.4  Data Subject Rights Support
+     POLICY REQUIREMENT §5.4: Vendors must support the Company's
+     obligations to respond to data subject requests (access,
+     rectification, erasure, portability, restriction) within 72 hours
+     of Company notification. Vendors must maintain systems capable of
+     identifying, exporting, and deleting individual data records on request.
+
+5.5  Data Retention and Deletion
+
+  5.5.1  POLICY REQUIREMENT §5.5.1: Vendors must adhere to the Company's
+         Data Retention Schedule (DRS), a current copy of which will be
+         provided at contract execution and updated when materially revised.
+         Vendors may not retain Company Data beyond the retention periods
+         specified in the DRS unless required by applicable law or
+         regulatory mandate, in which case the vendor must promptly notify
+         the Company.
+
+  5.5.2  POLICY REQUIREMENT §5.5.2: Upon expiration or termination of the
+         engagement, vendors must certifiably destroy or return all Company
+         Data within 30 days of the effective termination date. Destruction
+         must follow NIST SP 800-88 Rev. 1 standards for media sanitization
+         (Clear, Purge, or Destroy as appropriate). A signed Certificate of
+         Destruction must be provided to the Company within 5 business days
+         of completion. Backup media must be overwritten on the next
+         scheduled backup cycle, not to exceed 90 days.
+
+5.6  Data Breach Notification
+
+  5.6.1  POLICY REQUIREMENT §5.6.1: Vendors must notify the Company's
+         Privacy Officer and Chief Information Security Officer within
+         4 hours of discovering a Data Breach or suspected Data Breach
+         involving Company Data. The initial notification may be informal
+         (email or telephone) but must be followed by a written incident
+         report within 24 hours.
+
+  5.6.2  The incident report must include: (a) description of the nature
+         of the breach; (b) categories and approximate number of
+         individuals affected; (c) categories and approximate number of
+         data records concerned; (d) name and contact details of the
+         vendor's Data Protection Officer; (e) likely consequences of
+         the breach; (f) measures taken or proposed to address the breach.
+
+5.7  Privacy by Design
+     Vendors must implement privacy-by-design principles in any new
+     system or feature handling Personal Data, including data minimization,
+     purpose limitation, storage limitation, and pseudonymization where
+     technically feasible.
+
+5.8  Data Protection Officer
+     Vendors processing significant volumes of Personal Data or processing
+     Sensitive Personal Data on behalf of the Company must designate a
+     Data Protection Officer (DPO) and provide the DPO's contact
+     information to the Company's Legal team prior to contract execution.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 6 – INFORMATION SECURITY REQUIREMENTS
+════════════════════════════════════════════════════════════════════════
+
+6.1  Minimum Security Certification
+
+  6.1.1  POLICY REQUIREMENT §6.1.1: All Tier 1 and Tier 2 vendors
+         processing or storing Company Data must attain and maintain a
+         current, valid SOC 2 Type II report (AICPA Trust Services
+         Criteria: Security, Availability, and Confidentiality). The
+         report must cover a minimum 12-month audit period and must have
+         been issued no more than 12 months prior to contract execution
+         and on each anniversary thereafter.
+
+  6.1.2  POLICY REQUIREMENT §6.1.2: In addition to SOC 2 Type II,
+         vendors providing cloud infrastructure services, SaaS platforms,
+         or managed security services must also hold at least one of:
+         ISO 27001:2022 certification (current and unrevoked) or
+         FedRAMP Moderate authorization (for US government-adjacent workloads).
+
+  6.1.3  Cloud service vendors hosting financial data or health data must
+         additionally hold PCI DSS Level 1 compliance (for financial data)
+         or HITRUST CSF certification (for health data) as applicable.
+
+  6.1.4  Vendors must provide copies of all certifications and audit reports
+         to the Company within 5 business days of request. Reports
+         containing qualified opinions or exceptions must be accompanied by
+         a management remediation plan.
+
+6.2  Vulnerability and Patch Management
+
+  6.2.1  POLICY REQUIREMENT §6.2.1: Vendors must operate a formal
+         vulnerability management program. Critical vulnerabilities (CVSS
+         score ≥ 9.0) must be remediated within 14 days of discovery.
+         High vulnerabilities (CVSS 7.0–8.9) must be remediated within
+         30 days. Medium vulnerabilities (CVSS 4.0–6.9) within 90 days.
+
+  6.2.2  Vendors must apply operating system and application security
+         patches within the timeframes above. Emergency out-of-band
+         patches released by a vendor (e.g., Microsoft, Linux distros) must
+         be evaluated within 48 hours and applied within the relevant CVSS
+         timeframe.
+
+6.3  Penetration Testing
+
+  6.3.1  POLICY REQUIREMENT §6.3.1: Vendors must conduct annual external
+         penetration tests of all internet-facing systems and applications
+         that process Company Data. Tests must be performed by an
+         independent third party (not the vendor's internal team). Results
+         and remediation plans must be shared with the Company within
+         10 business days of report completion.
+
+  6.3.2  For Critical Vendors: Penetration tests must be conducted
+         semi-annually (every 6 months). The testing scope must include
+         web application testing (OWASP Top 10), network/infrastructure
+         testing, and — where applicable — API security testing.
+
+6.4  Access Controls
+
+  6.4.1  Vendors must implement least-privilege access for all personnel
+         accessing Company systems or data. Privileged access must be
+         granted only to named individuals with documented business need
+         and must be reviewed quarterly.
+
+  6.4.2  Multi-Factor Authentication (MFA) is mandatory for all accounts
+         with access to Company Data or Company systems. SMS-based OTP is
+         not an acceptable second factor for Tier 1 or Tier 2 vendors;
+         FIDO2/WebAuthn or TOTP authenticator apps are required.
+
+  6.4.3  All vendor personnel accessing Company systems must pass background
+         screening appropriate to their access level before onboarding.
+
+6.5  Encryption Standards
+
+  POLICY REQUIREMENT §6.5: All Company Data must be encrypted:
+  (a)  In transit: TLS 1.2 or higher; TLS 1.0 and 1.1 are prohibited.
+  (b)  At rest: AES-256 encryption using industry-standard key management.
+  (c)  Key management: Encryption keys must be rotated at least annually
+       and managed separately from encrypted data (split key custody for
+       Tier 1 data classifications).
+
+6.6  Security Incident Management
+
+  6.6.1  Vendors must maintain a documented Incident Response Plan (IRP)
+         reviewed and tested at least annually. A summary of the IRP and
+         the most recent tabletop exercise results must be provided to the
+         Company upon request.
+
+  6.6.2  Security incidents affecting Company systems or data must be
+         reported per Section 5.6 of this Playbook (Data Breach Notification).
+
+6.7  Security Awareness and Training
+     All vendor personnel with access to Company Data or systems must
+     complete annual security awareness training covering: phishing
+     recognition, social engineering, password hygiene, data handling
+     procedures, and incident reporting. Training completion records must
+     be available for Company audit on request.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 7 – INSURANCE AND FINANCIAL ASSURANCE
+════════════════════════════════════════════════════════════════════════
+
+7.1  Required Insurance Coverage
+
+  POLICY REQUIREMENT §7.1: All vendors under this Playbook must maintain
+  the following minimum insurance coverages and must name Greybeard
+  Corporate Solutions as an Additional Insured on all policies except
+  Workers' Compensation:
+
+  7.1.1  Commercial General Liability (CGL)
+         Minimum: USD $2,000,000 per occurrence / USD $4,000,000 aggregate
+         Must include: products-completed operations, personal and
+         advertising injury, contractual liability.
+
+  7.1.2  POLICY REQUIREMENT §7.1.2 – Cyber Liability and Technology
+         Errors & Omissions (Combined or Separate)
+         Cyber Liability: USD $10,000,000 per occurrence / $10,000,000
+         aggregate (Tier 1 vendors). USD $5,000,000 per occurrence /
+         $5,000,000 aggregate (Tier 2 and Tier 3 vendors).
+         Coverage must include: first-party breach response costs,
+         third-party liability, regulatory defense and fines, business
+         interruption, ransomware/extortion, and network security
+         liability. Coverage must extend to vendor's subcontractors
+         accessing Company Data.
+         Technology E&O: USD $5,000,000 per occurrence / $5,000,000
+         aggregate (Tier 1). USD $2,000,000 per occurrence / $2,000,000
+         aggregate (Tier 2 and Tier 3).
+
+  7.1.3  Workers' Compensation and Employers' Liability
+         Statutory limits for Workers' Compensation.
+         Employers' Liability: USD $1,000,000 per occurrence.
+
+  7.1.4  Professional Liability (Errors & Omissions)
+         Minimum: USD $5,000,000 per claim / USD $5,000,000 aggregate
+         (Tier 1). USD $2,000,000 per claim / $2,000,000 aggregate
+         (Tier 2 and Tier 3).
+         Required for: professional services, consulting, managed services.
+
+  7.1.5  Commercial Automobile Liability
+         Required only where vendor personnel operate vehicles in
+         performance of services. Minimum: USD $1,000,000 combined
+         single limit.
+
+7.2  Insurance Certificate Requirements
+     (a)  Insurance certificates (ACORD 25 or equivalent) must be
+          provided to the Company before contract execution.
+     (b)  Certificates must name: "Greybeard Corporate Solutions and
+          its Affiliates" as Additional Insured.
+     (c)  Vendors must provide 30 days advance written notice of policy
+          cancellation or material modification, 10 days for non-payment.
+     (d)  Annual certificate renewal must be provided within 5 business
+          days of policy anniversary.
+
+7.3  Financial Health Monitoring
+     Tier 1 and Critical Vendors must provide audited annual financial
+     statements upon request. The Company reserves the right to require
+     a performance bond or letter of credit if a vendor's financial
+     condition materially deteriorates during the contract term.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 8 – BUSINESS CONTINUITY AND DISASTER RECOVERY
+════════════════════════════════════════════════════════════════════════
+
+8.1  Business Continuity Plan (BCP)
+
+  POLICY REQUIREMENT §8.1: Tier 1 and Tier 2 vendors must maintain a
+  documented Business Continuity Plan. The BCP must address scenarios
+  including: natural disaster, cyberattack, loss of key personnel, and
+  supply chain disruption. Summary BCP documentation must be provided
+  to the Company on request and must be tested at least annually.
+
+8.2  Disaster Recovery Plan (DRP)
+
+  POLICY REQUIREMENT §8.2: Vendors processing or hosting Company Data
+  must maintain a documented Disaster Recovery Plan. Minimum recovery
+  objectives for services hosting Company Data are:
+    Recovery Time Objective (RTO):  ≤ 4 hours for Tier 1 services;
+                                    ≤ 24 hours for Tier 2 and Tier 3.
+    Recovery Point Objective (RPO): ≤ 1 hour for Tier 1 services;
+                                    ≤ 4 hours for Tier 2 and Tier 3.
+  Vendors must demonstrate DRP capabilities through annual DR tests and
+  provide test result summaries to the Company within 30 days of the test.
+
+8.3  Geographic Redundancy
+     Tier 1 vendors providing hosted or SaaS services to the Company must
+     operate from geographically redundant data centers in at least two
+     distinct fault zones. Data centers may not share power grid,
+     physical access routes, or cooling infrastructure.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 9 – SUBCONTRACTING AND SUPPLY CHAIN RISK
+════════════════════════════════════════════════════════════════════════
+
+9.1  Subcontracting Approval
+
+  POLICY REQUIREMENT §9.1: Vendors may not subcontract any portion of
+  Company-related work without prior written approval from the Company.
+  Requests for subcontracting approval must include: (a) subcontractor
+  name and company profile; (b) scope of subcontracted work; (c) evidence
+  of subcontractor's data security and compliance posture; (d) flow-down
+  provision confirming subcontractor is bound by equivalent obligations.
+
+9.2  Flow-Down Requirements
+     Approved subcontractors must be bound by contractual obligations
+     at least as stringent as those imposed on the prime vendor under
+     the Company's MSA with respect to: data protection, information
+     security, insurance, and confidentiality.
+
+9.3  Fourth-Party Risk
+     For Tier 1 vendors: vendors must identify and disclose to the
+     Company any fourth parties (subcontractors of subcontractors) who
+     may access Company Data and must confirm those fourth parties are
+     subject to equivalent data protection obligations.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 10 – EXPORT CONTROLS AND REGULATORY COMPLIANCE
+════════════════════════════════════════════════════════════════════════
+
+10.1  Export Control Compliance
+      Vendors must comply with all applicable export control laws,
+      including the US Export Administration Regulations (EAR), the
+      International Traffic in Arms Regulations (ITAR), and equivalent
+      non-US regulations. Vendors must not export, re-export, or transfer
+      Company technology or data in violation of applicable export controls.
+
+10.2  Sanctions Compliance
+      Vendors represent and warrant that they are not on any applicable
+      sanctions list (OFAC, EU, UN, UK HMT) and that they do not conduct
+      business with sanctioned countries, entities, or individuals.
+      Vendors must notify the Company within 24 hours if they become
+      aware of any sanctions designation affecting the vendor or its
+      key subcontractors.
+
+10.3  Anti-Money Laundering
+      Vendors must maintain anti-money laundering (AML) compliance
+      programs appropriate to their business activities and must
+      cooperate with any Company AML due diligence requirements.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 11 – ANTI-CORRUPTION AND ETHICS
+════════════════════════════════════════════════════════════════════════
+
+11.1  Anti-Bribery Compliance
+      Vendors must comply with the US Foreign Corrupt Practices Act (FCPA),
+      the UK Bribery Act 2010, and all other applicable anti-bribery laws.
+      Vendors must not offer, promise, give, or receive, directly or
+      indirectly, any bribe, kickback, or improper payment in connection
+      with any Company engagement.
+
+11.2  Code of Conduct
+      Vendors must maintain a written Code of Conduct that includes
+      prohibitions against: fraud, bribery, conflicts of interest, and
+      human rights violations. Vendors must make their Code of Conduct
+      available to the Company on request.
+
+11.3  Whistleblower Protections
+      Vendors must maintain a mechanism (hotline, email, or equivalent)
+      for employees and third parties to report ethical concerns without
+      fear of retaliation.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 12 – SERVICE LEVELS AND PERFORMANCE STANDARDS
+════════════════════════════════════════════════════════════════════════
+
+12.1  Minimum Uptime Commitment (SaaS/Hosted Services)
+
+  POLICY REQUIREMENT §12.1: SaaS and hosted service vendors providing
+  production services to the Company must commit to a minimum system
+  availability of 99.9% measured monthly (excluding scheduled maintenance
+  windows). Tier 1 SaaS vendors must commit to 99.95% availability.
+  Availability calculations must exclude outages of less than 5 minutes
+  and scheduled maintenance windows communicated at least 72 hours in advance.
+
+12.2  Service Credit Regime
+      Vendors must offer service credits for SLA breaches at a minimum of:
+        95.0%–99.8% availability: 10% credit on monthly fees
+        90.0%–94.9% availability: 25% credit on monthly fees
+        < 90.0% availability:    50% credit on monthly fees
+      Service credits are not the exclusive remedy for SLA breaches.
+      The Company retains the right to terminate for convenience if
+      availability falls below 95% in any two consecutive months.
+
+12.3  Reporting
+      Vendors must provide monthly SLA performance reports, including
+      uptime metrics, incident summaries, and open problem tickets,
+      within 10 business days of month-end.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 13 – AUDIT RIGHTS AND MONITORING
+════════════════════════════════════════════════════════════════════════
+
+13.1  Audit Rights
+
+  POLICY REQUIREMENT §13.1: The Company, or its appointed third-party
+  auditor, shall have the right to audit vendor's facilities, systems,
+  controls, and records relevant to the Company engagement no more than
+  once per calendar year upon 30 days written notice (for Tier 1: once
+  per calendar year; for Critical Vendors: up to twice per year). In the
+  event of a suspected Data Breach or material compliance violation,
+  audits may be conducted on 5 business days notice.
+
+13.2  Cooperation
+      Vendors must provide reasonable access to personnel, documentation,
+      systems, and facilities necessary to conduct any audit under §13.1.
+      Vendors may require audit personnel to execute appropriate
+      non-disclosure agreements before commencing on-site activities.
+
+13.3  Questionnaire Response
+      All vendors must complete the Company's annual Vendor Risk Assessment
+      Questionnaire within 30 days of receipt. Failure to respond within
+      the stipulated deadline constitutes a material breach.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 14 – TERMINATION AND EXIT MANAGEMENT
+════════════════════════════════════════════════════════════════════════
+
+14.1  Termination Notice Periods
+
+  POLICY REQUIREMENT §14.1: Standard termination notice periods are:
+    (a)  Termination for convenience: 90 days written notice from either
+         party. This 90-day period is the Company's standard and must be
+         reflected consistently across the MSA, any SOW, and any related
+         vendor-issued order form or commercial schedule. Inconsistent
+         notice periods across documents will be treated as a Policy
+         Deviation and flagged for Legal review.
+    (b)  Termination for cause (material breach): 30 days written notice
+         with right to cure within the 30-day period; if breach is not
+         cured in 30 days, termination becomes effective immediately.
+    (c)  Termination for insolvency: immediate upon written notice.
+
+14.2  Exit Assistance
+
+  POLICY REQUIREMENT §14.2: Upon receipt of a termination notice,
+  regardless of cause, vendors must provide at least 90 days of
+  transition assistance at no additional charge, including: data export
+  in standard machine-readable formats, documentation transfers,
+  knowledge transfer sessions, and cooperation with successor vendors.
+
+14.3  Survival Clauses
+      The following obligations survive termination or expiration:
+      confidentiality (5 years post-termination), data destruction
+      obligations (30 days post-termination), insurance (to the extent
+      claims may relate to pre-termination activities), and any
+      provisions necessary to enforce surviving rights.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 15 – DOCUMENT RETENTION AND RECORDS MANAGEMENT
+════════════════════════════════════════════════════════════════════════
+
+15.1  Company Records Retention Schedule
+
+  POLICY REQUIREMENT §15.1: Vendors must apply the following minimum
+  retention periods to all Company Data categories:
+
+  +────────────────────────────────┬──────────────────────────────+
+  | Category                       | Minimum Retention Period     |
+  +────────────────────────────────┼──────────────────────────────+
+  | Financial records              | 7 years                      |
+  | HR/employment records          | 7 years post-employment      |
+  | Contracts and amendments       | 10 years post-expiry         |
+  | Audit logs and access records  | 3 years                      |
+  | Security incident records      | 5 years                      |
+  | Customer/transaction data      | Per applicable law, min 5y   |
+  | Email and correspondence       | 3 years for business records |
+  | Backup media                   | 90 days rolling              |
+  +────────────────────────────────┴──────────────────────────────+
+
+15.2  Legal Hold
+      When the Company issues a legal hold notice, vendors must
+      immediately suspend destruction of any data covered by the hold,
+      regardless of normal retention schedules, until the hold is
+      formally lifted in writing by the Company's General Counsel.
+
+15.3  Secure Disposal
+      Disposal of physical media containing Company Data must comply
+      with NIST SP 800-88 Rev. 1. A certificate of secure disposal must
+      be provided to the Company within 10 business days.
+
+════════════════════════════════════════════════════════════════════════
+SECTION 16 – ENFORCEMENT AND EXCEPTIONS PROCESS
+════════════════════════════════════════════════════════════════════════
+
+16.1  Non-Compliance Remedies
+      A vendor's failure to meet any Policy Requirement identified in
+      this Playbook may, at the Company's discretion, result in:
+        (a)  Issuance of a formal Cure Notice requiring remediation
+             within 30 days;
+        (b)  Withholding of payment pending remediation;
+        (c)  Suspension of work under affected SOWs;
+        (d)  Termination for cause under Section 14.1(b);
+        (e)  Recovery of damages attributable to non-compliance.
+
+16.2  Exception Process
+      A vendor seeking an exception to any requirement in this Playbook
+      must: (a) submit a written exception request to Procurement with
+      a detailed business justification; (b) propose specific compensating
+      controls; (c) obtain sign-off from the CPO, CISO, and General Counsel.
+      Approved exceptions are valid for one year maximum and must be
+      re-evaluated at each contract renewal.
+
+16.3  Playbook Amendments
+      The Company reserves the right to update this Playbook at any time.
+      Vendors will be notified of material changes with 60 days advance
+      notice. For Tier 1 vendors, material changes that impose material
+      new costs require mutual written agreement to amend the MSA
+      accordingly.
+
+════════════════════════════════════════════════════════════════════════
+END OF PLAYBOOK
+Version 4.2 – Effective 1 January 2026
+Issued by: Office of the Chief Procurement Officer
+Approved by: CPO, General Counsel, CISO
+════════════════════════════════════════════════════════════════════════

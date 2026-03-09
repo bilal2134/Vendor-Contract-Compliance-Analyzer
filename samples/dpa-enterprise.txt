@@ -1,0 +1,515 @@
+DATA PROCESSING AGREEMENT
+
+DPA Reference: DPA-2026-0047
+MSA Reference: MSA-2026-0047
+Effective Date: February 1, 2026
+
+BETWEEN:
+  Greybeard Corporate Solutions, Inc. ("Controller" or "Company")
+  1200 Market Street, Suite 800, Wilmington, DE 19801
+  Data Protection Officer: privacy@greybeard.com
+
+AND:
+  NovaTech Solutions, LLC ("Processor" or "Vendor")
+  2550 Innovation Drive, Suite 300, San Jose, CA 95134
+  Data Protection Officer: dpo@novatechsolutions.com
+
+════════════════════════════════════════════════════════════════════════
+RECITALS
+════════════════════════════════════════════════════════════════════════
+
+This Data Processing Agreement ("DPA") supplements and forms part of
+the Master Service Agreement dated February 1, 2026 ("MSA") between
+the parties. This DPA establishes the terms and conditions under which
+NovaTech Solutions will process Personal Data on behalf of Greybeard
+Corporate Solutions in performance of the contracted services.
+
+The parties acknowledge that: (a) the Company acts as the Controller
+(Data Controller under GDPR; Business under CCPA) and determines the
+purposes and means of processing; (b) Vendor acts as the Processor
+(Data Processor under GDPR; Service Provider under CCPA) and processes
+Personal Data only on the Company's instructions.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 1 – DEFINITIONS
+════════════════════════════════════════════════════════════════════════
+
+For purposes of this DPA:
+
+"Controller" means Greybeard Corporate Solutions acting in its capacity
+as the entity determining the purposes and means of processing.
+
+"Data Subject" means an identified or identifiable natural person to
+whom Personal Data relates.
+
+"EEA" means the European Economic Area.
+
+"GDPR" means EU General Data Protection Regulation 2016/679, as
+directly applicable or as implemented into applicable national law.
+
+"Personal Data" means any information relating to an identified or
+identifiable natural person, as defined under applicable privacy law,
+including GDPR, CCPA, PIPEDA, and the UK Data Protection Act 2018.
+
+"Processing" means any operation performed on Personal Data including
+collection, storage, retrieval, use, disclosure, or erasure.
+
+"Processor" means NovaTech Solutions acting in its capacity as the
+entity processing Personal Data on behalf of the Controller.
+
+"SCCs" means the Standard Contractual Clauses for the transfer of
+personal data to third countries, as adopted by the European Commission
+on June 4, 2021 (Modules 2 and 3 as applicable).
+
+"Sensitive Personal Data" means Personal Data revealing racial or
+ethnic origin, political opinions, religious or philosophical beliefs,
+trade union membership, genetic data, biometric data, health data, and
+data concerning sex life or sexual orientation.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 2 – DETAILS OF PROCESSING
+════════════════════════════════════════════════════════════════════════
+
+2.1  Subject Matter.  Processor will process Personal Data to provide
+the technology and professional services described in the MSA and
+associated Statements of Work.
+
+2.2  Duration.  Processing will occur during the term of the MSA and
+for such additional period as is strictly necessary to fulfil
+post-termination obligations (including data retention, deletion, and
+audit), not to exceed 30 days post-termination.
+
+2.3  Nature and Purpose.  Processor will process Personal Data to:
+  (a)  Provide software-as-a-service analytics and workflow automation;
+  (b)  Provide technical support, maintenance, and professional services;
+  (c)  Generate usage analytics and system performance reports for
+       the Company's internal business operations;
+  (d)  Perform data integration, transformation, and reporting services
+       as specified in each SOW.
+
+2.4  Categories of Data Subjects.
+  - Company employees, contractors, and former employees
+  - Company customers and end-users
+  - Company suppliers and business partners (where applicable)
+  - Company prospects and leads (where applicable)
+
+2.5  Categories of Personal Data Processed.
+  - Contact information (name, email, phone, address)
+  - Employment data (role, department, employee ID, compensation bands)
+  - Authentication data (usernames, hashed passwords, MFA tokens)
+  - Transaction and usage data (system logs, access records)
+  - Financial data (invoice records, cost center allocations)
+  - Communication data (support tickets, correspondence)
+
+2.6  Sensitive Personal Data.  The services as designed do not
+contemplate routine processing of Sensitive Personal Data. If any
+Sensitive Personal Data is inadvertently included in a dataset, Vendor
+must notify the Company immediately and await further instructions before
+processing.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 3 – PROCESSOR OBLIGATIONS
+════════════════════════════════════════════════════════════════════════
+
+3.1  General Processing Obligations.  Processor shall:
+  (a)  Process Personal Data only on documented instructions from the
+       Controller, unless required to do otherwise by applicable law
+       (in which case Processor shall inform Controller before processing
+       unless prohibited by law);
+  (b)  Ensure that personnel authorized to process Personal Data are
+       bound by appropriate confidentiality obligations;
+  (c)  Implement the technical and organizational security measures
+       described in Annex II;
+  (d)  Respect the conditions in Article 4 for engaging sub-processors;
+  (e)  Assist the Controller in ensuring compliance with Data Subject
+       rights requests as described in Article 6;
+  (f)  Make available all information necessary to demonstrate compliance
+       with GDPR Article 28 and cooperate with audits as specified in
+       Article 10;
+  (g)  Immediately inform the Controller if any instruction infringes
+       GDPR or applicable privacy laws.
+
+3.2  Purpose Limitation.  Processor may not process Company Personal
+Data for any purpose other than performing services under the MSA. In
+particular, Processor shall not: (a) sell or rent Personal Data;
+(b) use Personal Data for targeted advertising; (c) build user profiles
+beyond what is necessary for service delivery; (d) disclose Personal
+Data to third parties for their independent business purposes.
+
+3.3  Data Minimization.  Processor shall collect and process only the
+minimum Personal Data necessary to perform the contracted services.
+Any excessive data collected must be deleted promptly upon discovery.
+
+3.4  Data Quality.  Processor shall implement appropriate measures to
+maintain the accuracy, completeness, and timeliness of Personal Data
+processed on behalf of the Controller.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 4 – SUB-PROCESSORS
+════════════════════════════════════════════════════════════════════════
+
+4.1  Authorization.  Controller provides general authorization for
+Processor to engage sub-processors subject to the conditions in this
+Article 4.
+
+4.2  Current Sub-Processors.  As of the effective date of this DPA,
+Processor's approved sub-processors for processing Controller's Personal
+Data are listed in Annex III. Processor will maintain this list and
+make it available on request.
+
+4.3  New Sub-Processors.  Processor shall provide Controller with at
+least 30 days written notice (email to privacy@greybeard.com) before
+engaging any new sub-processor. Controller may object to the new
+sub-processor within 14 days of notice; if Controller objects and
+Processor cannot provide the services without the new sub-processor,
+Controller may terminate the affected SOW without penalty.
+
+4.4  Flow-Down Obligations.  Processor shall impose on each sub-processor
+contractual data protection obligations that are at least as stringent
+as those imposed on Processor under this DPA. Processor remains fully
+liable to Controller for any sub-processor's failure to comply.
+
+4.5  Sub-Processor Audit.  Processor shall conduct or obtain annual
+assessments of each sub-processor's security and compliance posture and
+make assessment results available to Controller on request.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 5 – INTERNATIONAL TRANSFERS
+════════════════════════════════════════════════════════════════════════
+
+5.1  Restriction on International Transfers.  Processor shall not
+transfer any EEA-origin Personal Data outside the EEA without a lawful
+transfer mechanism as specified in Section 5.2.
+
+5.2  Transfer Mechanisms.  Where Processor transfers EEA Personal Data
+to countries not recognized as providing adequate protection, transfers
+shall rely on:
+  (a)  EU Standard Contractual Clauses (Module 2: Controller-to-Processor)
+       as incorporated in Annex IV to this DPA; or
+  (b)  An adequacy decision by the European Commission; or
+  (c)  Binding Corporate Rules approved by a competent supervisory authority.
+
+5.3  Transfer Impact Assessment.  Processor shall maintain and provide
+to Controller, upon request, a Transfer Impact Assessment (TIA) covering
+each country where it or its sub-processors process EEA Personal Data.
+The TIA must be reviewed and updated following changes in applicable law
+or sub-processor infrastructure.
+
+5.4  UK GDPR.  For UK-origin Personal Data, transfers outside the UK
+shall rely on UK SCCs (IDTA or addendum to EU SCCs) or an adequacy
+regulation confirmed by the UK Secretary of State.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 6 – DATA SUBJECT RIGHTS
+════════════════════════════════════════════════════════════════════════
+
+6.1  Support for Rights Requests.  Processor shall assist Controller
+in fulfilling Data Subject requests under applicable privacy law,
+including GDPR Articles 15-22 (access, rectification, erasure,
+restriction, portability, and objection) and CCPA Sections 1798.100–
+1798.198 (know, delete, correct, and opt-out of sale).
+
+6.2  Response Timeline.  Upon Controller's written notification,
+Processor shall provide the information or take the action necessary for
+Controller to respond to a Data Subject request within 72 hours of such
+notification.
+
+6.3  System Capability.  Processor represents and warrants that its
+systems are technically capable of: (a) identifying all Personal Data
+associated with a specific Data Subject by email, name, or customer ID;
+(b) exporting that data in a machine-readable format (JSON or CSV);
+(c) permanently deleting that data and all backups upon instruction.
+Processor shall provide evidence of these capabilities in the form of
+technical documentation within 30 days of this DPA's effective date.
+
+6.4  Direct Requests.  If a Data Subject contacts Processor directly
+(rather than Controller) with a rights request, Processor shall promptly
+forward the request to Controller's DPO within 24 hours without acting
+on it unilaterally.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 7 – SECURITY MEASURES
+════════════════════════════════════════════════════════════════════════
+
+7.1  Security Obligations.  Processor shall implement and maintain
+technical and organizational measures ("TOMs") commensurate with the
+risk to Data Subjects' rights and freedoms, having regard to the state
+of the art, costs, and the nature of processing. Minimum TOMs are
+described in Annex II and include:
+  (a)  Encryption of Personal Data in transit (TLS 1.2+) and at rest
+       (AES-256);
+  (b)  Multi-factor authentication for all systems processing Personal Data;
+  (c)  Role-based access control with least privilege enforcement;
+  (d)  Regular vulnerability assessments and penetration testing;
+  (e)  Security information and event management (SIEM) monitoring;
+  (f)  Secure software development lifecycle (SSDLC) practices.
+
+7.2  Security Certifications.  Processor maintains:
+  (a)  SOC 2 Type II (Trust Services Criteria: Security, Availability,
+       Confidentiality) — current report period October 2024 – September 2025;
+  (b)  ISO 27001:2022 — Certificate IS-2023-847291 valid through April 2026.
+  Processor must maintain these certifications in good standing throughout
+  the term and promptly notify Controller if any certification lapses.
+
+7.3  Security Updates.  Processor shall provide the Company with its
+most current security certifications within 5 business days of any
+request. Processor shall notify Company of any qualification or exception
+in a SOC 2 report, together with a management remediation plan, within
+10 business days of the report's issue date.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 8 – DATA BREACH NOTIFICATION
+════════════════════════════════════════════════════════════════════════
+
+8.1  Notification Timeline.  Without undue delay and in any event within
+4 hours of becoming aware of a Data Breach (or suspected Data Breach)
+involving Controller's Personal Data, Processor shall notify Controller's
+Data Protection Officer (privacy@greybeard.com) and CISO
+(ciso@greybeard.com) by telephone and email.
+
+8.2  Incident Report Contents.  Within 24 hours of initial notification,
+Processor shall provide a written incident report containing:
+  (a)  Description of the nature of the breach (unauthorized access,
+       disclosure, loss, destruction);
+  (b)  Categories and approximate number of individuals affected;
+  (c)  Categories and approximate number of records concerned;
+  (d)  Contact details of Processor's DPO (dpo@novatechsolutions.com);
+  (e)  Likely consequences of the breach;
+  (f)  Measures taken or proposed to contain, investigate, and remediate;
+  (g)  Timeline of discovered events.
+
+8.3  Cooperation.  Processor shall cooperate fully with Controller in
+investigating the breach, notifying affected Data Subjects and
+supervisory authorities, and remediating root causes.
+
+8.4  Non-Disclosure.  Processor shall not publicly disclose a Data
+Breach affecting Controller's Personal Data without Controller's prior
+written approval, except as required by applicable law.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 9 – DATA RETENTION AND DELETION
+════════════════════════════════════════════════════════════════════════
+
+9.1  Retention During Engagement.  Processor shall retain Personal Data
+only for the duration necessary to provide the contracted services and
+in accordance with the Company's Data Retention Schedule (DRS) provided
+at contract execution, as updated from time to time with notice.
+
+9.2  Retention Schedule Applicability.  The following retention periods
+apply to Company Personal Data categories:
+  - Employee records:           7 years post-employment or post-termination
+                                of this Agreement, whichever is longer
+  - Transaction / usage logs:   3 years from date of creation
+  - Financial records:          7 years from fiscal year end
+  - Security incident records:  5 years from incident closure
+  - Backup media:               Overwritten on next scheduled backup cycle,
+                                maximum 90 days
+
+9.3  Post-Termination Deletion.  Upon expiration or termination of the
+MSA, Processor shall, within 30 calendar days of the termination
+effective date:
+  (a)  Return all Personal Data to Controller in a structured, commonly
+       used, machine-readable format (CSV, JSON, or SQL export as agreed);
+  (b)  Certifiably destroy all remaining copies of Personal Data from
+       production systems, test environments, and offline storage;
+  (c)  Ensure all sub-processors have similarly destroyed or returned
+       Personal Data; and
+  (d)  Provide the Company with a signed Certificate of Data Destruction
+       within 5 business days of completing deletion, signed by
+       Processor's Data Protection Officer.
+
+9.4  Destruction Standards.  Data destruction shall comply with
+NIST SP 800-88 Rev. 1 (Clear, Purge, or Destroy standards for electronic
+and physical media). Certificates of Destruction must identify the
+methods used, media types, and the authorizing DPO.
+
+9.5  Legal Hold Exception.  If Processor receives a legal hold notice
+from Controller, Processor shall suspend destruction of the specified
+data until the hold is formally lifted by Controller's General Counsel
+in writing, notwithstanding any retention schedule or post-termination
+deletion obligation.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 10 – AUDIT RIGHTS
+════════════════════════════════════════════════════════════════════════
+
+10.1  Audit Right.  Controller, or a third-party auditor appointed by
+Controller, shall have the right to audit Processor's compliance with
+this DPA upon 30 days written notice, no more than once per calendar year.
+In the event of a confirmed Data Breach or material compliance concern,
+Controller may request an audit on 5 business days notice.
+
+10.2  Audit Scope.  Audits may cover: data processing records, security
+controls, sub-processor contracts, retention and deletion records, and
+incident response documentation.
+
+10.3  Evidence in Lieu of Audit.  Processor may satisfy audit
+obligations by providing: current SOC 2 Type II reports, ISO 27001
+surveillance audit certificates, and completed annual risk assessment
+questionnaires, provided these are materially complete and current.
+
+10.4  Cooperation.  Processor shall provide reasonable access to
+personnel, documentation, and systems necessary to conduct any audit.
+Processor may require auditors to execute a non-disclosure agreement
+consistent with Article 5 of the MSA before commencing on-site work.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 11 – INSURANCE
+════════════════════════════════════════════════════════════════════════
+
+11.1  Cyber Liability Insurance.  Processor shall maintain Cyber
+Liability insurance as required by Section 9.1 of the MSA and the
+Company's Procurement Playbook (Section 7.1.2). This DPA confirms
+that Processor's cyber liability coverage of USD $5,000,000 per
+occurrence and USD $5,000,000 aggregate applies to data breach events
+involving Controller's Personal Data. This coverage is documented in
+the Insurance Certificate attached to the MSA as Exhibit C.
+
+COMPLIANCE NOTE: The Company's Playbook (§7.1.2) requires USD $10,000,000
+aggregate for Tier 1 vendors. Processor is currently classified as Tier 2,
+making USD $5,000,000 aggregate the applicable threshold. Should Processor
+be reclassified to Tier 1, enhanced cyber coverage must be obtained within
+60 days of reclassification notice. This gap is recorded in Exception Log
+EX-2024-113.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 12 – LIABILITY
+════════════════════════════════════════════════════════════════════════
+
+12.1  Processor Liability.  Processor shall be liable to Controller
+for damages caused by Processing in breach of this DPA. Liability is
+not subject to the general aggregate cap in MSA Article 8 for breaches
+attributable to Processor's deliberate violation of data protection law.
+
+12.2  Controller Liability.  Controller shall be liable to Processor
+for damages caused by Controller's processing instructions that violate
+applicable privacy law.
+
+12.3  Apportionment.  Where damages are caused jointly by Controller
+and Processor, each party's liability shall be apportioned according to
+fault.
+
+════════════════════════════════════════════════════════════════════════
+ARTICLE 13 – GENERAL PROVISIONS
+════════════════════════════════════════════════════════════════════════
+
+13.1  Order of Precedence.  This DPA shall prevail over the MSA with
+respect to the processing of Personal Data. Where both documents are
+silent, applicable privacy law governs.
+
+13.2  Regulatory Changes.  If applicable privacy laws change materially,
+the parties shall negotiate in good faith to amend this DPA within 60 days
+of the effective date of the legislative change.
+
+13.3  Governing Law.  This DPA shall be governed by the laws of the
+State of Delaware, without prejudice to Data Subjects' rights under
+applicable privacy law.
+
+13.4  Entire Agreement.  This DPA, together with its Annexes and the
+MSA, constitutes the entire agreement between the parties with respect
+to the processing of Personal Data.
+
+Executed as of the dates below:
+
+GREYBEARD CORPORATE SOLUTIONS, INC.
+Data Protection Officer: Dr. Linda Forsythe
+Signature: ______________________________
+Date: February 1, 2026
+
+NOVATECH SOLUTIONS, LLC
+Data Protection Officer: Prakash Mehta
+Signature: ______________________________
+Date: February 1, 2026
+
+════════════════════════════════════════════════════════════════════════
+ANNEX I – DESCRIPTION OF PROCESSING ACTIVITIES
+════════════════════════════════════════════════════════════════════════
+
+A.  Controller Details
+    Name: Greybeard Corporate Solutions, Inc.
+    Contact: privacy@greybeard.com
+    GDPR Role: Controller
+
+B.  Processor Details
+    Name: NovaTech Solutions, LLC
+    Contact: dpo@novatechsolutions.com
+    GDPR Role: Processor
+
+C.  Processing Activities
+    1. SaaS analytics platform (workforce analytics module)
+    2. Data integration and ETL pipeline services
+    3. Business intelligence reporting
+    4. Customer success analytics
+
+D.  Data Categories and Retention
+    See Article 2.5 and Article 9 of this DPA.
+
+════════════════════════════════════════════════════════════════════════
+ANNEX II – TECHNICAL AND ORGANIZATIONAL SECURITY MEASURES (TOMs)
+════════════════════════════════════════════════════════════════════════
+
+1.  Access Control
+    - Role-based access control (RBAC) aligned to job function
+    - Principle of least privilege enforced
+    - Privileged access management (PAM) for administrative accounts
+    - Quarterly access reviews
+    - FIDO2 / TOTP MFA on all production access
+
+2.  Encryption
+    - In transit: TLS 1.3 (minimum TLS 1.2); TLS 1.0 / 1.1 disabled
+    - At rest: AES-256-GCM with FIPS 140-2 Level 2 HSM key management
+    - Key rotation: annually for data encryption keys; immediately upon
+      compromise suspicion
+
+3.  Logging and Monitoring
+    - SIEM platform (Splunk Enterprise Security) collecting logs from
+      all production systems, IAM, and network infrastructure
+    - Log retention: 3 years for security logs; searchable online for 1 year
+    - 24/7 Security Operations Center (SOC) with 15-minute alert response SLA
+
+4.  Vulnerability Management
+    - Weekly authenticated vulnerability scans (Qualys)
+    - Annual external penetration test (independent third party)
+    - Semi-annual web application penetration test (OWASP Top 10 scope)
+    - CVSS 9.0+ patches applied within 14 days; CVSS 7.0–8.9 within 30 days
+
+5.  Incident Response
+    - Documented IRP reviewed annually
+    - Annual tabletop exercise; records available to Company on request
+    - 4-hour breach notification SLA (Article 8 of this DPA)
+
+6.  Physical Security
+    - Data centers: SOC 2 Type II certified co-location facilities
+    - Badge access with biometric verification
+    - CCTV monitoring, visitor logging
+
+7.  Data Disposal
+    - Production: cryptographic erasure + logical deletion
+    - Physical media: NIST SP 800-88 (Purge or Destroy)
+    - Certificates of Destruction provided as required
+
+════════════════════════════════════════════════════════════════════════
+ANNEX III – APPROVED SUB-PROCESSORS
+════════════════════════════════════════════════════════════════════════
+
+Name                    | Jurisdiction | Processing Activity
+──────────────────────────────────────────────────────────────────────
+Amazon Web Services     | USA / EU     | Cloud infrastructure (IaaS)
+Snowflake Inc.          | USA          | Data warehousing
+Twilio SendGrid         | USA          | Transactional email delivery
+Zendesk Inc.            | USA          | Customer support ticketing
+PagerDuty Inc.          | USA          | Incident alerting
+
+All sub-processors are governed by data processing agreements with
+Processor containing obligations equivalent to this DPA.
+
+════════════════════════════════════════════════════════════════════════
+ANNEX IV – STANDARD CONTRACTUAL CLAUSES
+════════════════════════════════════════════════════════════════════════
+
+The EU Standard Contractual Clauses (Module 2: Controller to Processor),
+as adopted by the European Commission Decision of June 4, 2021
+(C(2021)3972), are incorporated herein by reference for transfers of
+EEA Personal Data to the United States. Processor confirms that a
+Transfer Impact Assessment has been completed and is available to
+Controller on request.

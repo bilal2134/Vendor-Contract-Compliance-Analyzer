@@ -1,0 +1,339 @@
+INFORMATION SECURITY QUESTIONNAIRE AND CERTIFICATION SUMMARY
+Vendor: NovaTech Solutions, LLC
+Prepared for: Greybeard Corporate Solutions, Inc.
+Document Date: January 15, 2026
+Questionnaire Version: GCS-SEC-Q v3.1
+Responding Officer: Priya Sharma, Chief Information Security Officer
+Contact: psharma@novatechsolutions.com | +1 (408) 555-0192
+
+════════════════════════════════════════════════════════════════════════
+SECTION A – VENDOR SECURITY POSTURE OVERVIEW
+════════════════════════════════════════════════════════════════════════
+
+A.1  Does your organization have a formally documented Information
+     Security Management System (ISMS)?
+     ANSWER: Yes. NovaTech Solutions maintains a comprehensive ISMS
+     aligned to ISO/IEC 27001:2022. The ISMS is governed by the
+     Information Security Steering Committee chaired by the CISO and
+     reviewed quarterly.
+
+A.2  Does your organization have a dedicated security team?
+     ANSWER: Yes. NovaTech employs a team of 28 security professionals
+     including: a CISO, 3 Security Architects, 8 Security Engineers,
+     a 12-person 24/7 Security Operations Center (SOC), and a 4-person
+     GRC (Governance, Risk, and Compliance) team.
+
+A.3  Is your security program assessed by third parties?
+     ANSWER: Yes. NovaTech undergoes the following independent
+     assessments annually:
+     - SOC 2 Type II audit (AICPA Trust Services Criteria)
+     - ISO 27001:2022 surveillance audit
+     - External penetration test (network, application, API)
+     - Web application penetration test (OWASP Top 10)
+     - PCI DSS self-assessment questionnaire (for cardholder environments)
+
+════════════════════════════════════════════════════════════════════════
+SECTION B – SECURITY CERTIFICATIONS AND AUDIT REPORTS
+════════════════════════════════════════════════════════════════════════
+
+B.1  SOC 2 TYPE II CERTIFICATION
+
+     Status: CURRENT – Unqualified Opinion
+
+     Audit Firm:        Deloitte & Touche LLP
+     Audit Period:      October 1, 2024 – September 30, 2025
+     Report Date:       November 15, 2025
+     Trust Services:    Security (CC1–CC9), Availability (A1),
+                        Confidentiality (C1)
+     Auditor Opinion:   Unqualified (no exceptions or adverse findings)
+
+     Notes on Coverage:
+     The SOC 2 Type II report covers NovaTech's SaaS analytics platform,
+     data integration infrastructure, and corporate IT systems. The report
+     includes testing of 148 controls across all five Trust Services
+     Criteria categories selected. All 148 controls tested were found to
+     be suitably designed and operating effectively throughout the audit
+     period.
+
+     MANAGEMENT: Where can I get a copy?
+     The full report may be provided under NDA to Greybeard's authorized
+     personnel upon written request to trust@novatechsolutions.com.
+
+B.2  ISO 27001:2022 CERTIFICATION
+
+     Status: CURRENT AND VALID
+
+     Certification Body:   BSI Group (British Standards Institution)
+     Certificate Number:   IS-2023-847291
+     Standard:             ISO/IEC 27001:2022
+     Scope:                Design, development, operation, and support of
+                           cloud-based analytics and workflow automation
+                           software and services; including supporting
+                           infrastructure and corporate operations.
+     Issue Date:           May 1, 2023
+     Valid Through:        April 30, 2026
+     Surveillance Audits:  Completed May 2024 (no non-conformities);
+                           Scheduled May 2026 for recertification
+
+     ISO 27001 Annex A Controls implemented: All 93 controls from
+     ISO 27001:2022 Annex A are within scope. Five controls are
+     assessed as not applicable and are documented in the Statement of
+     Applicability (SoA). SoA is available upon request.
+
+B.3  PCI DSS COMPLIANCE
+
+     Status: COMPLIANT (Level 4 Merchant / Service Provider)
+
+     Cardholder data environment is scoped to payment processing
+     for NovaTech's subscription billing only. Company (Greybeard)
+     data is NOT processed through NovaTech's CDE. PCI DSS SAQ-D
+     completed annually; most recent version completed December 2025.
+
+B.4  PENETRATION TESTING
+
+     External Penetration Test (Annual)
+     Testing Firm:     Rapid7 Professional Services
+     Scope:            All internet-facing systems, APIs, and
+                       network perimeter for production environment
+     Last Test:        October 14–18, 2025
+     Findings Summary:
+       Critical (CVSS ≥ 9.0):  0 open
+       High (CVSS 7.0–8.9):    1 finding (remediated November 2, 2025)
+       Medium (CVSS 4.0–6.9):  4 findings (3 remediated; 1 in remediation,
+                                target date February 28, 2026)
+       Low/Informational:       12 findings (accepted risks, documented)
+     Final Report Date:   November 5, 2025
+     Retesting Date:      November 30, 2025 (all Critical/High verified
+                          remediated)
+     Report Available: Upon request under NDA.
+
+     Web Application Penetration Test (Semi-Annual)
+     Testing Firm:     NCC Group
+     Scope:            OWASP Top 10 + API security testing; customer-facing
+                       SaaS platform and administrative portal
+     Last Test:        August 5–9, 2025
+     Findings Summary:
+       Critical: 0 | High: 0 | Medium: 2 (remediated) | Low: 6
+     Report Date: August 20, 2025
+
+B.5  VULNERABILITY MANAGEMENT PROGRAM
+
+     NovaTech operates a formal Vulnerability Management Program aligned
+     to NIST SP 800-40 Rev. 4. Key elements:
+     - Authenticated vulnerability scanning: Qualys VMDR, weekly cadence
+       for production systems; daily for critical infrastructure.
+     - Remediation SLAs enforced and tracked:
+         CVSS 9.0+   14 days    (100% compliance last 12 months)
+         CVSS 7.0–8.9 30 days  (97% compliance; 1 exception, extended with
+                                 approval to 45 days, Q3 2025)
+         CVSS 4.0–6.9 90 days  (95% compliance)
+     - Mean Time to Remediate (MTTR) for Critical: 8.3 days (FY2025)
+
+════════════════════════════════════════════════════════════════════════
+SECTION C – ACCESS CONTROLS AND AUTHENTICATION
+════════════════════════════════════════════════════════════════════════
+
+C.1  How does your organization control access to production systems
+     hosting client data?
+     ANSWER:
+     - Role-Based Access Control (RBAC): All access is assigned based on
+       documented job function. Least privilege is enforced; no default
+       administrative access.
+     - Privileged Access Management (PAM): Privileged accounts are managed
+       through CyberArk PAM. All privileged sessions are recorded and
+       subject to dual-approval for production changes.
+     - Multi-Factor Authentication (MFA): FIDO2/WebAuthn hardware security
+       keys (YubiKey 5 series) required for all production access and
+       administrative accounts. TOTP authenticator apps used for selected
+       internal tools. SMS OTP is prohibited for any privileged access.
+     - Quarterly Access Reviews: All production access is reviewed quarterly
+       by system owners; stale accounts are disabled within 48 hours.
+     - Just-in-Time (JIT) Access: Temporary elevated access is granted
+       via JIT workflows with automatic expiry (maximum 8 hours).
+
+C.2  Background screening for personnel:
+     ANSWER: All employees and contractors with access to client data
+     undergo pre-employment background screening, including: criminal
+     history (7-year lookback), identity verification, education and
+     employment history verification, and where applicable, credit
+     history review. Screening is conducted by Sterling Talent Solutions.
+
+C.3  Security training completion rate (last 12 months):
+     ANSWER: 100% of personnel with access to client systems have
+     completed annual information security awareness training, including
+     modules on: phishing recognition, social engineering, data handling,
+     password hygiene, incident reporting, and GDPR/CCPA awareness.
+     Training platform: KnowBe4. Training completion records are
+     maintained for 3 years and available for Company audit on request.
+
+════════════════════════════════════════════════════════════════════════
+SECTION D – ENCRYPTION AND DATA PROTECTION
+════════════════════════════════════════════════════════════════════════
+
+D.1  Describe your encryption standards for data at rest and in transit.
+     ANSWER:
+
+     In Transit:
+     - TLS 1.3 is the default protocol for all external communications.
+       TLS 1.2 is permitted for legacy integrations with documented risk
+       acceptance. TLS 1.0 and TLS 1.1 are disabled at the network
+       perimeter. Perfect Forward Secrecy (PFS) is required on all
+       TLS configurations.
+     - Internal service-to-service communication uses mTLS (mutual TLS)
+       with certificate rotation managed by HashiCorp Vault.
+
+     At Rest:
+     - All production databases: AES-256-GCM encryption managed by AWS KMS
+       with customer-managed keys (CMK). Keys are stored separately from
+       encrypted data.
+     - Object storage (AWS S3): Server-side encryption with AES-256-GCM;
+       client-side encryption applied to sensitive datasets before upload.
+     - Backup data: AES-256-GCM encrypted; tapes (offline cold storage)
+       encrypted prior to physical transport.
+     - Encryption Key Management: FIPS 140-2 Level 3 HSM (AWS CloudHSM).
+       Keys rotated annually; immediate rotation upon suspected compromise.
+     - Key custodians: 2-person rule enforced for master key access.
+
+D.2  What encryption is applied to mobile devices and endpoint systems?
+     ANSWER: All employee laptops use BitLocker (Windows) or FileVault
+     (macOS) full-disk encryption tied to TPM 2.0 chips. Mobile Device
+     Management (MDM) through Jamf enforces encryption policies on all
+     company-managed devices.
+
+════════════════════════════════════════════════════════════════════════
+SECTION E – INCIDENT RESPONSE AND BREACH NOTIFICATION
+════════════════════════════════════════════════════════════════════════
+
+E.1  Do you have a documented Incident Response Plan?
+     ANSWER: Yes. NovaTech's Incident Response Plan (IRP) v4.2 covers:
+     detection and analysis, containment, eradication, recovery, and
+     post-incident review. The IRP is reviewed semi-annually and tested
+     through annual tabletop exercises.
+
+E.2  What is your breach notification timeline?
+     ANSWER: NovaTech is contractually committed to notifying the Company
+     within 4 hours of discovering a Data Breach or suspected Data Breach
+     involving Company data. This timeline is consistent with the DPA
+     (Article 8) and the Company's Procurement Policy Playbook (§5.6.1).
+     Internal escalation to the CISO occurs within 30 minutes. The
+     dedicated incident response hotline (available 24/7) is:
+     +1 (408) 555-0911.
+
+E.3  Describe notable security incidents in the last 24 months.
+     ANSWER: NovaTech experienced two security incidents in the last 24
+     months involving customer-facing systems:
+     (a) August 2024: Phishing attempt targeting 3 employees. One
+         employee clicked a malicious link; MFA prevented account
+         compromise. Investigation completed within 48 hours. No client
+         data exposed. RCA completed; enhanced phishing simulation
+         training rolled out.
+     (b) February 2025: Vulnerability in a third-party library (CVE-2025-
+         1843, CVSS 7.5) discovered. Patch applied within 19 days.
+         No exploitation detected. Greybeard was notified as a precaution
+         in accordance with contractual obligations.
+     Neither incident involved unauthorized exposure of client Personal Data.
+
+E.4  Tabletop exercise:
+     Most recent tabletop exercise: September 12, 2025 (ransomware
+     scenario). Executive summary available upon request. Action items
+     from the exercise: (a) improve offline backup verification cadence
+     (completed November 2025); (b) add automatic DNS sinkholing for
+     known C2 domains (completed October 2025).
+
+════════════════════════════════════════════════════════════════════════
+SECTION F – BUSINESS CONTINUITY AND DISASTER RECOVERY
+════════════════════════════════════════════════════════════════════════
+
+F.1  Business Continuity Plan:
+     ANSWER: Yes — "NovaTech Business Continuity Plan v3.0" reviewed
+     January 2026. Covers scenarios: data center failure, cyberattack,
+     pandemic/personnel unavailability, supply chain disruption. Summary
+     available to Company on request.
+
+F.2  Disaster Recovery:
+     ANSWER:
+     NovaTech's SaaS platform is hosted on AWS in a multi-region
+     active-active configuration (Primary: us-east-1; Secondary: us-west-2;
+     EU data: eu-west-1).
+
+     Committed Recovery Objectives (per contractual SLAs):
+       Recovery Time Objective (RTO):  ≤ 2 hours (exceeds Tier 1 ≤4h standard)
+       Recovery Point Objective (RPO): ≤ 15 minutes (exceeds Tier 1 ≤1h standard)
+
+     DR Test: Most recent DR failover test completed November 20, 2025.
+     Results: RTO achieved = 1 hour 42 minutes. RPO achieved = 8 minutes.
+     Test report available upon request.
+
+F.3  Geographic Redundancy:
+     Production workloads run across two AWS Availability Zones per region.
+     Primary and secondary regions are geographically separated (US East
+     and US West) with independent power, cooling, and network infrastructure.
+     EU customer data is hosted in eu-west-1 (Ireland) with eu-central-1
+     (Frankfurt) as warm standby.
+
+════════════════════════════════════════════════════════════════════════
+SECTION G – SUBPROCESSORS AND SUPPLY CHAIN
+════════════════════════════════════════════════════════════════════════
+
+G.1  Approved Subprocessors (see DPA Annex III for full list):
+     AWS, Snowflake, Twilio SendGrid, Zendesk, PagerDuty.
+     All subprocessors are subject to DPAs with at least equivalent
+     protections to those required under Greybeard's MSA.
+
+G.2  Annual subprocessor security reviews:        Conducted quarterly
+G.3  Software Bill of Materials (SBOM) available: Yes, upon request
+G.4  Open source vulnerability scanning:          OWASP Dependency Check
+                                                   + Snyk SCA, automated daily
+
+════════════════════════════════════════════════════════════════════════
+SECTION H – REGULATORY AND COMPLIANCE
+════════════════════════════════════════════════════════════════════════
+
+H.1  GDPR Compliance:  Full compliance program operational since May 2018.
+                        DPO designated; ROPA maintained; LIAs completed.
+H.2  CCPA Compliance:  Compliant since January 2020; CPRA amendments
+                        incorporated as of January 2023.
+H.3  Export Controls:  EAR/ITAR compliance program. No ITAR-controlled
+                        technology processed.
+H.4  Anti-Corruption:  Anti-bribery policy and FCPA / UK Bribery Act
+                        compliance training for all employees.
+H.5  Sanctions:        No OFAC, EU, or UN sanctions designations.
+                        Annual sanctions screening of all employees and
+                        suppliers by Dow Jones Risk & Compliance.
+
+════════════════════════════════════════════════════════════════════════
+SECTION I – CERTIFICATIONS SUMMARY TABLE
+════════════════════════════════════════════════════════════════════════
+
+Certification              Status         Valid Until      Reference
+──────────────────────────────────────────────────────────────────────
+SOC 2 Type II              CURRENT        Nov 2026*        Deloitte
+ISO 27001:2022             CURRENT        April 30, 2026   BSI IS-2023-847291
+PCI DSS SAQ-D              CURRENT        Dec 31, 2026     Internal
+GDPR Compliance            ACTIVE         N/A (ongoing)    DPO Office
+CCPA / CPRA                ACTIVE         N/A (ongoing)    Privacy Counsel
+──────────────────────────────────────────────────────────────────────
+* Next SOC 2 audit period begins October 1, 2025; report expected
+  Nov/Dec 2026. The current report covers through September 30, 2025.
+
+NOTE: ISO 27001 certificate IS-2023-847291 expires April 30, 2026.
+Recertification audit is scheduled for March 2026. NovaTech commits
+to providing the renewed certificate to Greybeard within 15 business
+days of issuance.
+
+════════════════════════════════════════════════════════════════════════
+VENDOR ATTESTATION
+════════════════════════════════════════════════════════════════════════
+
+I, the undersigned, hereby attest that the information provided in this
+Security Questionnaire is accurate and complete to the best of my
+knowledge as of the document date stated above. NovaTech Solutions, LLC
+will promptly notify Greybeard Corporate Solutions of any material
+changes to the security controls, certifications, or incident history
+described herein.
+
+Priya Sharma
+Chief Information Security Officer
+NovaTech Solutions, LLC
+psharma@novatechsolutions.com
+January 15, 2026

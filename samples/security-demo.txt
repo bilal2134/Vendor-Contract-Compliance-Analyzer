@@ -1,0 +1,2 @@
+Security Questionnaire
+The vendor maintains SOC 2 Type II and ISO 27001 certifications. Annual penetration tests are performed and security incidents are reported within 24 hours.

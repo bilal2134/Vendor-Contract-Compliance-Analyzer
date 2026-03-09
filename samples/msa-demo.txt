@@ -1,0 +1,3 @@
+Master Service Agreement
+Either party may terminate this Agreement on 30 days written notice.
+The agreement references SOC 2 compliance as part of the vendor's security posture.

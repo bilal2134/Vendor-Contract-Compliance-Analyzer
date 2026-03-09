@@ -2,10 +2,11 @@ import Link from "next/link";
 
 import { FindingCard } from "@/components/report/finding-card";
 import { SummaryMetric } from "@/components/report/summary-metric";
-import { getDashboard, getReport } from "@/lib/api";
+import { getDashboard, getPlaybooks, getReport } from "@/lib/api";
 
 export default async function HomePage() {
   const dashboard = await getDashboard().catch(() => ({ cards: [] }));
+  const playbooks = await getPlaybooks().catch(() => ({ items: [] }));
   const featuredReport = dashboard.cards[0]?.report_id
     ? await getReport(dashboard.cards[0].report_id).catch(() => null)
     : null;
@@ -13,13 +14,12 @@ export default async function HomePage() {
   return (
     <main className="stack-lg">
       <section className="hero">
-        <span className="kicker">Procurement review workspace</span>
+        <span className="kicker">Procurement review command center</span>
         <div className="stack-md">
-          <h1>Vendor package analysis with grounded policy citations and explicit uncertainty.</h1>
+          <h1>Turn dense policy playbooks and scattered vendor submissions into a negotiation-ready compliance brief.</h1>
           <p>
-            This first implementation slice wires the intake and reviewer experience together so
-            compliance findings, conflicts, and missing evidence can be inspected before the full
-            retrieval and reasoning stack lands.
+            The platform now ingests a real playbook, analyzes multi-document vendor packages, and
+            surfaces grounded findings with citations, confidence, conflicts, and exportable outputs.
           </p>
         </div>
         <div className="actions">
@@ -35,12 +35,14 @@ export default async function HomePage() {
       </section>
 
       <section className="grid grid-3">
-        <SummaryMetric label="Active packages" value={dashboard.cards.length} />
+        <SummaryMetric label="Active packages" value={dashboard.cards.length} tone="accent" helper="Persisted in SQLite" />
         <SummaryMetric
           label="Critical review items"
           value={dashboard.cards.reduce((sum, card) => sum + card.critical_findings, 0)}
+          tone="critical"
+          helper="Missing clauses plus conflicts"
         />
-        <SummaryMetric label="Playbook versions" value={1} />
+        <SummaryMetric label="Playbook versions" value={playbooks.items.length} helper="Versioned policy baselines" />
       </section>
 
       <section className="grid grid-2">
@@ -67,12 +69,13 @@ export default async function HomePage() {
         <div className="panel stack-md">
           <div>
             <span className="eyebrow">Design intent</span>
-            <h2>What this baseline proves</h2>
+            <h2>What the live build proves</h2>
           </div>
           <div className="stack-sm">
-            <p>Requirement-centric report structure with explicit statuses and confidence scoring.</p>
-            <p>Side-by-side policy and vendor evidence model for drill-down workflows.</p>
-            <p>Conflict findings represented as first-class review objects, not buried notes.</p>
+            <p>Requirement-centric analysis across all uploaded vendor documents, not isolated clause search.</p>
+            <p>Grounded report outputs with playbook and vendor citations ready for escalation and negotiation.</p>
+            <p>Conflict findings elevated into first-class review objects instead of buried footnotes.</p>
+            <p>Local-first storage and retrieval with optional Gemini enrichment for sharper summaries.</p>
           </div>
         </div>
       </section>
@@ -81,7 +84,7 @@ export default async function HomePage() {
         <section className="stack-md">
           <div>
             <span className="eyebrow">Featured finding</span>
-            <h2>{featuredReport.vendor_name} seeded report preview</h2>
+            <h2>{featuredReport.vendor_name} live report preview</h2>
           </div>
           <FindingCard finding={featuredReport.findings[0]} />
         </section>

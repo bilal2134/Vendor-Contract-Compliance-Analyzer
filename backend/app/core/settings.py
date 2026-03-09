@@ -1,4 +1,5 @@
 from functools import lru_cache
+from pathlib import Path
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
@@ -9,7 +10,10 @@ class Settings(BaseSettings):
     api_prefix: str = "/api"
     environment: str = "development"
     gemini_api_key: str | None = None
-    chroma_path: str = "./.chroma"
+    gemini_model: str = "gemini-flash-latest"
+    gemini_embedding_model: str = "models/gemini-embedding-001"
+    chroma_path: Path = Path("./storage/chroma")
+    storage_root: Path = Path("./storage")
     database_url: str = "sqlite:///./compliance.db"
 
     model_config = SettingsConfigDict(

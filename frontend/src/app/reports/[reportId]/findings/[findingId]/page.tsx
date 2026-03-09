@@ -23,11 +23,16 @@ export default async function FindingDetailPage({
 
   return (
     <main className="stack-lg">
-      <section className="hero">
+      <section className="hero hero-report">
         <span className="kicker">Finding drill-down</span>
         <div className="stack-md">
           <h1>{finding.title}</h1>
           <p>{finding.summary}</p>
+        </div>
+        <div className="finding-meta-row">
+          <span className="badge">{finding.category}</span>
+          <span className="badge muted">{finding.status.replaceAll("_", " ")}</span>
+          <span className="confidence">Confidence {(finding.confidence * 100).toFixed(0)}%</span>
         </div>
         <div className="actions">
           <Link href={`/reports/${reportId}`} className="button-secondary">
@@ -85,6 +90,10 @@ export default async function FindingDetailPage({
           <div className="muted-surface">Retrieval: {(finding.confidence_breakdown.retrieval * 100).toFixed(0)}%</div>
           <div className="muted-surface">Grounding: {(finding.confidence_breakdown.grounding * 100).toFixed(0)}%</div>
           <div className="muted-surface">Rule completion: {(finding.confidence_breakdown.rule_completion * 100).toFixed(0)}%</div>
+        </div>
+        <div className="muted-surface">
+          <strong>Search trace</strong>
+          <p>{finding.search_summary}</p>
         </div>
       </section>
     </main>

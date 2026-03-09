@@ -1,5 +1,11 @@
 # Evaluation Plan
 
+## Current validation status
+
+- Backend tests pass for health plus end-to-end playbook upload, package upload, and report retrieval.
+- Frontend production build passes.
+- Live API smoke tests have covered health, package creation, report retrieval, and export endpoints.
+
 ## Release 1 quality targets
 
 - Citation precision: every stored citation must resolve to an actual source object.
@@ -16,8 +22,8 @@
 4. Conflicting terms across vendor documents.
 5. Citation-grounding validation.
 
-## Immediate validation for current scaffold
+## Immediate validation commands
 
-1. Backend health endpoint returns successfully.
-2. Package creation returns a job id and seeded report can be queried.
-3. Frontend pages render against the API contracts without type errors.
+1. `Set-Location backend; & "../.venv/Scripts/python.exe" -m pytest tests`
+2. `Set-Location frontend; npm run build`
+3. Start the backend and upload one playbook plus one sample package through the UI.

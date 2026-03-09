@@ -1,0 +1,278 @@
+CERTIFICATE OF INSURANCE AND INSURANCE SUMMARY SCHEDULE
+
+Vendor:        NovaTech Solutions, LLC
+               2550 Innovation Drive, Suite 300
+               San Jose, CA 95134
+
+Certificate Holder / Additional Insured:
+               Greybeard Corporate Solutions, Inc. and its Affiliates
+               1200 Market Street, Suite 800
+               Wilmington, DE 19801
+
+Certificate Date:    February 1, 2026
+Policy Year:         February 1, 2026 – January 31, 2027
+Broker:              Marsh McLennan Agency | Commercial Insurance Division
+                     345 California Street, San Francisco, CA 94104
+                     Contact: Jennifer Park | jpark@marshmma.com | (415) 555-0134
+                     Broker of Record License: CA #0G04360
+
+════════════════════════════════════════════════════════════════════════
+PART I – SUMMARY OF INSURANCE COVERAGES
+════════════════════════════════════════════════════════════════════════
+
+This Insurance Certificate confirms that NovaTech Solutions, LLC holds
+the following insurance policies, each of which is in full force and
+effect as of the Certificate Date. Greybeard Corporate Solutions, Inc.
+and its Affiliates are named as Additional Insured on all policies
+listed below, except Workers' Compensation, via blanket Additional
+Insured endorsements attached to each policy.
+
+────────────────────────────────────────────────────────────────────────
+POLICY 1: COMMERCIAL GENERAL LIABILITY (CGL)
+────────────────────────────────────────────────────────────────────────
+
+Insurer:          The Chubb Corporation (Chubb Insurance Company of New Jersey)
+Policy Number:    GL-2026-NSJ-447822
+Policy Period:    February 1, 2026 – January 31, 2027
+Form:             ISO CGL Form CG 00 01 04 13 (Occurrence Form)
+
+Coverage Limits:
+  Each Occurrence:                     USD $2,000,000
+  General Aggregate:                   USD $4,000,000
+  Products-Completed Operations Agg:   USD $4,000,000
+  Personal and Advertising Injury:     USD $2,000,000
+  Damage to Rented Premises:           USD $250,000
+  Medical Expense (any one person):    USD $10,000
+
+Special Endorsements:
+  - Blanket Additional Insured (Primary/Non-Contributory): endorsed per
+    written contract, naming Greybeard Corporate Solutions, Inc. and
+    its Affiliates.
+  - Waiver of Subrogation in favor of Additional Insured.
+  - Notice of Cancellation: 30 days advance written notice to Certificate
+    Holder; 10 days for non-payment of premium.
+
+Coverage Highlights:
+  Products and completed operations included in aggregate.
+  Contractual liability for indemnification obligations included.
+  Personal and advertising injury coverage included.
+  Cross-liability / severability of interests clause included.
+
+COMPLIANCE NOTE: Meets the Company's Playbook requirement §7.1.1
+(USD $2M per occurrence / USD $4M aggregate).
+
+────────────────────────────────────────────────────────────────────────
+POLICY 2: CYBER LIABILITY AND TECHNOLOGY ERRORS & OMISSIONS
+          (Combined Cyber / Tech E&O Form)
+────────────────────────────────────────────────────────────────────────
+
+Insurer:          Beazley Furlonge Ltd (Lloyd's Syndicate 623/2623)
+Policy Number:    B0901CY202601247
+Policy Period:    February 1, 2026 – January 31, 2027
+Form:             Beazley Breach Response and Technology Combined Policy
+
+Coverage Limits:
+  Cyber Liability:
+    Per Claim / Per Occurrence:        USD $5,000,000
+    Annual Aggregate:                  USD $5,000,000
+    Sub-limit – Regulatory Defense:    USD $2,000,000
+    Sub-limit – Ransomware/Extortion:  USD $2,000,000
+    Sub-limit – Business Interruption: USD $1,500,000
+    Sub-limit – Data Recovery Costs:   USD $1,000,000
+
+  Technology E&O:
+    Per Claim:                         USD $2,000,000
+    Annual Aggregate:                  USD $2,000,000
+
+  Combined Aggregate (Cyber + Tech E&O): USD $5,000,000
+
+Deductible / Retention:
+    Cyber Liability:   USD $50,000 self-insured retention (SIR) per claim
+    Technology E&O:    USD $50,000 SIR per claim
+
+First-Party Coverage Included:
+  - Network security and privacy liability
+  - Data breach response costs (forensics, legal, notification, credit
+    monitoring, public relations)
+  - Business interruption and extra expense arising from cyber event
+  - Ransomware / cyber extortion payments and response costs
+  - Data recovery and system restoration costs
+  - Reputational harm resulting from covered cyber event
+
+Third-Party Coverage Included:
+  - Network security liability (failure to prevent unauthorized access)
+  - Privacy liability (unauthorized disclosure of Personal Data)
+  - Regulatory defense costs and civil fines in jurisdictions where insurable
+  - Payment Card Industry (PCI) assessments
+  - Technology E&O (misconfigured systems, software failures, errors)
+  - Multimedia liability
+
+Coverage Extensions:
+  - Coverage extends to processing activities performed by approved
+    subprocessors listed in DPA Annex III
+  - Coverage covers operations in all countries where NovaTech has employees
+    or infrastructure
+  - Worldwide coverage territory
+
+Special Endorsements:
+  - Additional Insured: Greybeard Corporate Solutions, Inc. and its
+    Affiliates named as Additional Insured for third-party claims arising
+    from Vendor's operations
+  - 30-day cancellation notice to Certificate Holder
+  - Claims-made policy; Extended Reporting Period (ERP) of 12 months
+    available at Vendor's option upon non-renewal
+
+COMPLIANCE ANALYSIS:
+  The Company's Procurement Policy Playbook (Section 7.1.2) specifies:
+    - Tier 1 vendors: USD $10,000,000 per occurrence / USD $10,000,000 aggregate
+    - Tier 2 vendors: USD $5,000,000 per occurrence / USD $5,000,000 aggregate
+
+  NovaTech Solutions is currently classified as a Tier 2 vendor under the
+  Company's risk framework. This policy MEETS the Tier 2 threshold of
+  USD $5,000,000 per occurrence / USD $5,000,000 aggregate.
+
+  If NovaTech is reclassified to Tier 1, additional cyber coverage of
+  USD $5,000,000 (bringing limits to USD $10,000,000) must be placed
+  within 60 days of reclassification notice. NovaTech acknowledges this
+  obligation and confirms it has a readily available insurer quote for
+  the enhanced limit. Exception Log EX-2024-113 documents the current
+  Tier 2 classification and Tier 1 upgrade pathway.
+
+  Tech E&O limit of USD $2M meets the Playbook Tier 2 threshold of
+  USD $2M per claim / USD $2M aggregate (§7.1.2).
+
+────────────────────────────────────────────────────────────────────────
+POLICY 3: WORKERS' COMPENSATION AND EMPLOYERS' LIABILITY
+────────────────────────────────────────────────────────────────────────
+
+Insurer:          Travelers Property Casualty Company of America
+Policy Number:    WC-2026-NSJ-881644
+Policy Period:    February 1, 2026 – January 31, 2027
+Jurisdiction:     All states in which NovaTech has employees
+
+Coverage Limits:
+  Workers' Compensation:        Statutory limits (all applicable states)
+  Employers' Liability:
+    Bodily Injury by Accident:  USD $1,000,000 each accident
+    Bodily Injury by Disease:   USD $1,000,000 policy limit
+    Bodily Injury by Disease:   USD $1,000,000 each employee
+
+Note: Additional Insured status is not applicable for Workers' Compensation.
+Waiver of Subrogation in favor of Greybeard Corporate Solutions is endorsed.
+
+COMPLIANCE NOTE: Meets the Company's Playbook requirement §7.1.3
+(Statutory limits; USD $1M Employers' Liability per occurrence).
+
+────────────────────────────────────────────────────────────────────────
+POLICY 4: PROFESSIONAL LIABILITY / ERRORS & OMISSIONS
+────────────────────────────────────────────────────────────────────────
+
+Insurer:          AIG / New Hampshire Insurance Company
+Policy Number:    PL-2026-NSJ-228934
+Policy Period:    February 1, 2026 – January 31, 2027
+Form:             Claims-made and reported
+
+Coverage Limits:
+  Per Claim:          USD $2,000,000
+  Annual Aggregate:   USD $2,000,000
+
+Deductible:           USD $25,000 per claim
+
+Coverage Includes:
+  - Professional services errors and omissions
+  - Technology professional liability
+  - Network security and data privacy liability (to the extent not
+    covered under Cyber policy above)
+  - Defense costs within limits
+
+Extended Reporting Period: 12 months at Vendor's option upon non-renewal.
+
+Greybeard Corporate Solutions named as Additional Insured for
+third-party claims arising from NovaTech's professional services.
+
+COMPLIANCE NOTE: Meets the Company's Playbook requirement §7.1.4
+(USD $2M per claim / USD $2M aggregate for Tier 2 vendors).
+
+────────────────────────────────────────────────────────────────────────
+POLICY 5: UMBRELLA / EXCESS LIABILITY
+────────────────────────────────────────────────────────────────────────
+
+Insurer:          Hartford Financial Services Group
+Policy Number:    UM-2026-NSJ-116734
+Policy Period:    February 1, 2026 – January 31, 2027
+
+Coverage Limits:
+  Per Occurrence:     USD $5,000,000
+  Annual Aggregate:   USD $5,000,000
+
+Underlying Policies: CGL (Policy 1), Employers' Liability, Professional
+  Liability (Policy 4). Follows form and terms of underlying policies.
+
+Greybeard Corporate Solutions named as Additional Insured consistent
+with underlying CGL policy.
+
+════════════════════════════════════════════════════════════════════════
+PART II – INSURANCE CERTIFICATE REPRESENTATIONS
+════════════════════════════════════════════════════════════════════════
+
+NovaTech Solutions, LLC hereby represents and warrants:
+
+1.  All policies listed in Part I are in full force and effect as of
+    the Certificate Date and carry no outstanding premium arrears.
+
+2.  Greybeard Corporate Solutions, Inc. and its Affiliates are named
+    as Additional Insured on all applicable policies per this Certificate.
+
+3.  NovaTech will provide Greybeard with 30 days advance written notice
+    of any cancellation, non-renewal, or material modification of any
+    policy listed herein. Notice will be provided to:
+    risk@greybeard.com and legal@greybeard.com.
+
+4.  NovaTech will provide renewed insurance certificates within 5 business
+    days of each annual policy anniversary.
+
+5.  All insuring companies listed carry an AM Best rating of A- (Excellent)
+    or higher and are licensed to write insurance in all jurisdictions
+    where NovaTech operates.
+
+6.  The cyber liability policy (Policy 2) applies to NovaTech's full
+    scope of services under MSA-2026-0047, including all data processing
+    activities described in the DPA, and extends to the activities of
+    approved subprocessors listed in DPA Annex III.
+
+════════════════════════════════════════════════════════════════════════
+PART III – BROKER CERTIFICATION
+════════════════════════════════════════════════════════════════════════
+
+I, Jennifer Park, a licensed insurance broker (CA #0G04360), hereby
+certify that the above insurance summary accurately reflects the
+policies held by NovaTech Solutions, LLC as of February 1, 2026.
+Original ACORD 25 certificates of insurance for each policy are
+attached as exhibits to the MSA (Exhibit C) and are available from
+NovaTech's broker upon request.
+
+Jennifer Park
+Account Executive, Technology and Life Sciences Practice
+Marsh McLennan Agency
+jpark@marshmma.com | (415) 555-0134
+February 1, 2026
+
+════════════════════════════════════════════════════════════════════════
+PART IV – COVERAGE COMPLIANCE MAP
+════════════════════════════════════════════════════════════════════════
+
+Playbook Requirement            Required Limit    Policy 2 Limit    Status
+──────────────────────────────────────────────────────────────────────────
+§7.1.1 CGL per occurrence       $2,000,000        $2,000,000        MEETS
+§7.1.1 CGL aggregate            $4,000,000        $4,000,000        MEETS
+§7.1.2 Cyber (Tier 2) per occ   $5,000,000        $5,000,000        MEETS
+§7.1.2 Cyber (Tier 2) aggregate $5,000,000        $5,000,000        MEETS
+§7.1.2 Tech E&O (Tier 2) claim  $2,000,000        $2,000,000        MEETS
+§7.1.2 Tech E&O aggregate       $2,000,000        $2,000,000        MEETS
+§7.1.3 Workers Comp             Statutory         Statutory         MEETS
+§7.1.3 Employers' Liability     $1,000,000        $1,000,000        MEETS
+§7.1.4 Prof Liability per claim $2,000,000        $2,000,000        MEETS
+§7.1.4 Prof Liability aggregate $2,000,000        $2,000,000        MEETS
+──────────────────────────────────────────────────────────────────────────
+Note: If NovaTech is reclassified to Tier 1, Cyber limits must be
+increased to $10M per occurrence / $10M aggregate within 60 days.

@@ -10,9 +10,10 @@ const statusLabels: Record<Finding["status"], string> = {
 
 interface FindingCardProps {
   finding: Finding;
+  compact?: boolean;
 }
 
-export function FindingCard({ finding }: FindingCardProps) {
+export function FindingCard({ finding, compact = false }: FindingCardProps) {
   return (
     <article className={`finding-card severity-${finding.severity}`}>
       <div className="finding-meta-row">
@@ -22,6 +23,18 @@ export function FindingCard({ finding }: FindingCardProps) {
       </div>
       <h3>{finding.title}</h3>
       <p>{finding.summary}</p>
+      {!compact ? (
+        <div className="finding-glance-grid">
+          <div className="muted-surface">
+            <span className="eyebrow">Policy source</span>
+            <p>{finding.policy_citation.source_name}</p>
+          </div>
+          <div className="muted-surface">
+            <span className="eyebrow">Vendor evidence count</span>
+            <p>{finding.vendor_citations.length || 0} supporting excerpts</p>
+          </div>
+        </div>
+      ) : null}
       <div className="citation-block">
         <span className="eyebrow">Playbook requirement</span>
         <strong>{finding.policy_citation.section}</strong>

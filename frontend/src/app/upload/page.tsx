@@ -1,7 +1,9 @@
 import Link from "next/link";
 
 import { PackageUploadForm } from "@/components/upload/package-upload-form";
+import { PlaybookUploadForm } from "@/components/upload/playbook-upload-form";
 import { UploadQueue } from "@/components/upload/upload-queue";
+import { getPlaybooks } from "@/lib/api";
 
 const placeholderDocuments = [
   { filename: "master-service-agreement.pdf", documentType: "MSA" },
@@ -11,16 +13,18 @@ const placeholderDocuments = [
   { filename: "company-profile.pdf", documentType: "Profile" },
 ];
 
-export default function UploadPage() {
+export default async function UploadPage() {
+  const playbookResponse = await getPlaybooks().catch(() => ({ items: [] }));
+
   return (
     <main className="stack-lg">
       <section className="hero">
-        <span className="kicker">Milestone B</span>
+        <span className="kicker">Real ingestion workflow</span>
         <div className="stack-md">
-          <h1>Seed a vendor package with explicit document typing and job stages.</h1>
+          <h1>Upload the policy playbook, then analyze a full vendor package against it.</h1>
           <p>
-            The upload API is live in the backend. This page is the first reviewer-facing surface for
-            package composition, document taxonomy, and processing-state design.
+            This workflow now uses real file uploads, SQLite persistence, chunked document parsing,
+            local vector retrieval, and heuristic compliance analysis with precise citations.
           </p>
         </div>
         <div className="actions">
@@ -34,20 +38,20 @@ export default function UploadPage() {
       </section>
 
       <section className="grid grid-2">
-        <PackageUploadForm />
+        <PlaybookUploadForm />
+        <PackageUploadForm playbooks={playbookResponse.items} />
         <div className="panel stack-md">
           <div>
             <span className="eyebrow">Processing stages</span>
-            <h2>Current orchestration contract</h2>
+            <h2>Live analysis pipeline</h2>
           </div>
           <div className="stack-sm">
-            <div className="muted-surface">1. Queued</div>
-            <div className="muted-surface">2. Parsing</div>
-            <div className="muted-surface">3. Extracting</div>
-            <div className="muted-surface">4. Indexing</div>
-            <div className="muted-surface">5. Analyzing</div>
-            <div className="muted-surface">6. Validating</div>
-            <div className="muted-surface">7. Complete</div>
+            <div className="muted-surface">1. Playbook persisted and requirementized</div>
+            <div className="muted-surface">2. Vendor documents parsed into page-aware chunks</div>
+            <div className="muted-surface">3. Chunks indexed into local Chroma collections</div>
+            <div className="muted-surface">4. Requirements evaluated across the entire package</div>
+            <div className="muted-surface">5. Findings, conflicts, and citations persisted in SQLite</div>
+            <div className="muted-surface">6. Review report generated and exportable</div>
           </div>
         </div>
         <UploadQueue items={placeholderDocuments} />
@@ -55,14 +59,21 @@ export default function UploadPage() {
 
       <section className="panel stack-md">
         <div>
-          <span className="eyebrow">Next implementation step</span>
-          <h2>Wire this page to the package creation endpoint</h2>
+          <span className="eyebrow">Playbook inventory</span>
+          <h2>{playbookResponse.items.length} playbook version{playbookResponse.items.length === 1 ? "" : "s"} ready</h2>
         </div>
-        <p>
-          The backend accepts `vendor_name`, `playbook_version_id`, and typed document metadata. The
-          next slice is form submission plus live job polling, followed by real file upload and
-          parser status.
-        </p>
+        {playbookResponse.items.length === 0 ? (
+          <p>Upload a playbook first. Package analysis is blocked until at least one playbook version exists.</p>
+        ) : (
+          playbookResponse.items.map((playbook) => (
+            <div key={playbook.version_id} className="muted-surface">
+              <strong>{playbook.name}</strong>
+              <p>
+                {playbook.effective_date} · {playbook.requirement_count} extracted requirements · {playbook.status}
+              </p>
+            </div>
+          ))
+        )}
       </section>
     </main>
   );

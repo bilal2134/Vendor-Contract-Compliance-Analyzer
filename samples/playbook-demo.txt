@@ -1,0 +1,11 @@
+4.2.1 Cyber Liability Coverage
+Vendors must maintain at least $5000000 cyber liability coverage and reference the coverage obligation in the DPA for data-processing engagements.
+
+2.7 Termination Standards
+Termination periods must be consistent across governing commercial documents and ancillary vendor materials.
+
+5.4.3 Data Retention Requirements
+All data-processing vendors must commit to documented retention periods and deletion timelines aligned to company schedules.
+
+3.9 Security Certifications
+Security certifications such as SOC 2 or ISO 27001 must be identified in the security questionnaire and referenced in the MSA.
