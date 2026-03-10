@@ -7,6 +7,7 @@ from app.services.compliance_engine import (
     _extract_soc2_dates,
     _has_anti_assignment_clause,
     _infer_status,
+    _normalize_signal_text,
     _score_relevance,
 )
 
@@ -64,3 +65,11 @@ def test_extract_soc2_dates_parses_report_and_audit_end() -> None:
 
     assert report_date == datetime(2025, 11, 15)
     assert audit_end == datetime(2025, 9, 30)
+
+
+def test_normalize_signal_text_flattens_newline_split_phrases() -> None:
+    text = 'F.1 Business Continuity Plan:\nANSWER: Yes\nSummary\navailable to Company on request.'
+
+    normalized = _normalize_signal_text(text)
+
+    assert "summary available to company on request" in normalized

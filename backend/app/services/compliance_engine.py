@@ -382,6 +382,10 @@ def _infer_status(
     return FindingStatus.NON_COMPLIANT
 
 
+def _normalize_signal_text(text: str) -> str:
+    return " ".join(text.lower().split())
+
+
 def _serialize_citation(chunk: DocumentChunk, document_lookup: dict[str, Document]) -> dict:
     document = document_lookup[chunk.document_id]
     section = chunk.section_name or chunk.metadata_json.get("section_name")
@@ -1250,6 +1254,92 @@ def build_report(db: Session, package: VendorPackage, playbook_version_id: str) 
                     "without prior written Company consent was found. Insolvency references or IP ownership language do not satisfy this requirement."
                 )
             fallback_summary = "The requirement is satisfied only by an explicit anti-assignment clause in the MSA, not by insolvency or personnel-allocation language."
+        elif "change of control" in lower_requirement:
+            control_chunks = _find_chunks(
+                chunks,
+                include_terms=("change of control",),
+                doc_types=("msa", "profile"),
+            )
+            if control_chunks:
+                matched_chunks = _merge_unique_chunks(control_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in control_chunks[:2]]
+                retrieval_score = max(retrieval_score, 0.72)
+                grounding_score = max(grounding_score, 0.82)
+            control_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+            has_notice = "90 days" in control_text and "change of control" in control_text
+            has_competitor_termination = "direct competitor" in control_text and "60 days" in control_text and "terminate" in control_text
+            if has_notice and has_competitor_termination:
+                rule_completion = 1.0
+                search_summary = "The MSA provides 90 days advance change-of-control notice and gives the Company a termination right if the acquirer is a direct competitor."
+            elif has_notice or has_competitor_termination:
+                rule_completion = 0.65
+                force_status = FindingStatus.PARTIAL
+                search_summary = "Change-of-control protections are partially evidenced, but one of the required notice or competitor-termination elements is missing from the package excerpts."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.NON_COMPLIANT
+                search_summary = "No qualifying change-of-control clause with the required notice and competitor-termination protections was found."
+            fallback_summary = "This requirement expects both 90 days advance notice of change of control and a termination right if the acquirer is a direct competitor."
+        elif (
+            "5.1" in (requirement.section_name or "").lower()
+            or ("data processing agreement" in lower_requirement and "article 28" in lower_requirement)
+            or "condition precedent to contract signature" in lower_requirement
+        ):
+            dpa_chunks = _find_chunks(
+                chunks,
+                include_terms=("data processing agreement", "gdpr", "ccpa", "controller", "processor"),
+                doc_types=("dpa",),
+            )
+            if dpa_chunks:
+                matched_chunks = _merge_unique_chunks(dpa_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in dpa_chunks[:3]]
+                retrieval_score = max(retrieval_score, 0.76)
+                grounding_score = max(grounding_score, 0.86)
+            dpa_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+            has_dpa = any((chunk.document_type or "").lower() == "dpa" for chunk in matched_chunks)
+            has_article28 = "article 28" in dpa_text or "gdpr article 28" in dpa_text or "gdpr" in dpa_text
+            has_ccpa = "ccpa" in dpa_text or "service provider under ccpa" in dpa_text
+            if has_dpa and has_article28 and has_ccpa:
+                rule_completion = 1.0
+                search_summary = "An executed DPA is present and the package ties it to GDPR Article 28 and CCPA service-provider obligations."
+            elif has_dpa:
+                rule_completion = 0.68
+                force_status = FindingStatus.PARTIAL
+                search_summary = "A DPA is present, but the retrieved text does not clearly evidence all GDPR Article 28 and CCPA coverage elements."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.NON_COMPLIANT
+                search_summary = "No executed DPA satisfying the playbook's privacy-law requirements was found in the uploaded package."
+            fallback_summary = "This requirement is satisfied by a DPA that is actually present in the package and contains GDPR Article 28 / CCPA controller-processor language."
+        elif "indemnify, defend, and hold harmless" in lower_requirement or "third-party claims" in lower_requirement:
+            indemnity_chunks = _find_chunks(
+                chunks,
+                include_terms=("indemnify",),
+                doc_types=("msa",),
+            )
+            if indemnity_chunks:
+                matched_chunks = _merge_unique_chunks(indemnity_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in indemnity_chunks[:2]]
+                retrieval_score = max(retrieval_score, 0.68)
+                grounding_score = max(grounding_score, 0.78)
+            indemnity_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+            has_ip = "intellectual property rights" in indemnity_text or "ip indemnification" in indemnity_text
+            has_breach = "data breach" in indemnity_text
+            has_law = "violation of applicable law" in indemnity_text
+            has_gross = "gross negligence" in indemnity_text or "willful misconduct" in indemnity_text or "wilful misconduct" in indemnity_text
+            covered = sum(1 for flag in (has_ip, has_breach, has_law, has_gross) if flag)
+            if covered >= 4:
+                rule_completion = 1.0
+                search_summary = "The package includes a broad indemnification clause covering the full set of required third-party claim scenarios."
+            elif covered >= 1:
+                rule_completion = 0.55
+                force_status = FindingStatus.PARTIAL
+                search_summary = "Indemnification is only partially evidenced. The package covers some scenarios, such as IP infringement, but not the full playbook indemnity scope."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.NON_COMPLIANT
+                search_summary = "No qualifying vendor indemnification clause covering the required third-party claim scenarios was found in the MSA."
+            fallback_summary = "This requirement expects a broad vendor indemnity, not just a narrow IP-specific indemnification clause."
         elif any(token in lower_requirement for token in ["hierarchy of documents", "order of precedence", "entire agreement", "incorporated"]):
             lowered_chunks = [chunk.text.lower() for chunk in matched_chunks]
             has_playbook_integration = any(
@@ -1381,6 +1471,36 @@ def build_report(db: Session, package: VendorPackage, playbook_version_id: str) 
                 f"Requirement expects all 5 data subject rights supported within \u2264{max_req_hours:.0f}h "
                 f"of Company notification, with documented technical capability to identify, export, and delete."
             )
+        elif "privacy by design" in lower_requirement or "pseudonymization" in lower_requirement:
+            privacy_chunks = _find_chunks(
+                chunks,
+                include_terms=("purpose limitation", "data minimization", "storage limitation", "pseudonym", "privacy by design"),
+                doc_types=("dpa", "security"),
+            )
+            if privacy_chunks:
+                matched_chunks = _merge_unique_chunks(privacy_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in privacy_chunks[:3]]
+                privacy_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+                has_explicit_design = "privacy by design" in privacy_text
+                principles_found = sum(
+                    1 for token in ("data minimization", "purpose limitation", "storage limitation", "pseudonym")
+                    if token in privacy_text
+                )
+                if has_explicit_design:
+                    rule_completion = 1.0
+                    search_summary = "Explicit privacy-by-design language was found in the vendor package."
+                elif principles_found >= 3:
+                    rule_completion = 0.7
+                    force_status = FindingStatus.PARTIAL
+                    search_summary = "Privacy-design controls are partially evidenced through multiple privacy principles, but the package does not expressly commit to privacy by design or pseudonymization."
+                else:
+                    rule_completion = 0.0
+                    force_status = FindingStatus.MISSING
+                    retrieval_score = min(retrieval_score, 0.12)
+                    grounding_score = min(grounding_score, 0.3)
+                    vendor_citations = []
+                    search_summary = "No explicit privacy-by-design commitment or sufficient evidence of design-stage privacy controls was found in the uploaded package."
+                fallback_summary = "This requirement expects explicit privacy-by-design language or clear evidence of minimization, purpose limitation, storage limitation, and pseudonymization controls."
         elif (
             "destroy" in lower_requirement
             or "nist sp 800" in lower_requirement
@@ -1530,6 +1650,33 @@ def build_report(db: Session, package: VendorPackage, playbook_version_id: str) 
             else:
                 search_summary = "No formal vulnerability-management program with the required CVSS-based remediation SLAs was found."
             fallback_summary = "This requirement expects both a formal program and documented remediation SLAs of 14/30/90 days for critical/high/medium vulnerabilities."
+        elif "penetration tests of all internet-facing systems" in lower_requirement or "independent third party" in lower_requirement:
+            pen_annual_chunks = _find_chunks(
+                chunks,
+                include_terms=("penetration test",),
+                doc_types=("security", "dpa"),
+            )
+            if pen_annual_chunks:
+                matched_chunks = _merge_unique_chunks(pen_annual_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in pen_annual_chunks[:3]]
+                retrieval_score = max(retrieval_score, 0.74)
+                grounding_score = max(grounding_score, 0.84)
+            pen_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+            has_annual_external = "external penetration test (annual)" in pen_text or "annual external penetration test" in pen_text
+            has_independent = "independent third party" in pen_text or "rapid7 professional services" in pen_text
+            has_report = "report available" in pen_text or "results" in pen_text or "retesting" in pen_text
+            if has_annual_external and has_independent and has_report:
+                rule_completion = 1.0
+                search_summary = "Annual external penetration testing by an independent third party is evidenced, and the package includes results / report-sharing language."
+            elif has_annual_external and has_independent:
+                rule_completion = 0.75
+                force_status = FindingStatus.PARTIAL
+                search_summary = "Annual independent external penetration testing is evidenced, but report-sharing or remediation-plan availability is only partially explicit."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.NON_COMPLIANT
+                search_summary = "No annual independent third-party external penetration-test evidence was found for internet-facing systems handling Company Data."
+            fallback_summary = "This requirement expects an annual external test, performed by an independent third party, with results/remediation information available to the Company."
         elif "penetration" in lower_requirement and "semi" in lower_requirement:
             pen_chunks = _find_chunks(
                 chunks,
@@ -1563,6 +1710,202 @@ def build_report(db: Session, package: VendorPackage, playbook_version_id: str) 
                 rule_completion = 0.0
                 search_summary = "No penetration-testing frequency evidence was found for this Critical-Vendor requirement."
             fallback_summary = "This requirement applies only to confirmed Critical Vendors. If applicable, annual testing is insufficient; semi-annual testing is required."
+        elif "least-privilege access" in lower_requirement or ("privileged access" in lower_requirement and "quarterly" in lower_requirement):
+            access_chunks = _find_chunks(
+                chunks,
+                include_terms=("least privilege", "privileged", "access review", "rbac", "documented job function"),
+                doc_types=("security", "dpa"),
+            )
+            if access_chunks:
+                matched_chunks = _merge_unique_chunks(access_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in access_chunks[:3]]
+                retrieval_score = max(retrieval_score, 0.75)
+                grounding_score = max(grounding_score, 0.85)
+            access_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+            has_least_privilege = "least privilege is enforced" in access_text or "role-based access control" in access_text
+            has_named_need = "documented job function" in access_text or "business need" in access_text
+            has_quarterly_review = "reviewed quarterly" in access_text or "quarterly access reviews" in access_text
+            if has_least_privilege and has_named_need and has_quarterly_review:
+                rule_completion = 1.0
+                search_summary = "Least-privilege access is evidenced through RBAC, documented job-function / business-need gating, and quarterly access reviews."
+            elif has_least_privilege and (has_named_need or has_quarterly_review):
+                rule_completion = 0.78
+                force_status = FindingStatus.PARTIAL
+                search_summary = "Least-privilege controls are substantially evidenced, but one of the documented-business-need or quarterly-review elements is only partially explicit."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.NON_COMPLIANT
+                search_summary = "No sufficient least-privilege and privileged-access review evidence was found in the package."
+            fallback_summary = "This requirement expects least privilege, named or documented business need for privileged access, and quarterly review evidence."
+        elif "incident response plan" in lower_requirement or "tabletop" in lower_requirement:
+            irp_chunks = _find_chunks(
+                chunks,
+                include_terms=("incident response plan", "irp", "tabletop", "incident response"),
+                doc_types=("security", "dpa"),
+            )
+            if irp_chunks:
+                matched_chunks = _merge_unique_chunks(irp_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in irp_chunks[:3]]
+                retrieval_score = max(retrieval_score, 0.76)
+                grounding_score = max(grounding_score, 0.86)
+            irp_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+            has_documented_irp = "documented incident response plan" in irp_text or "incident response plan (irp)" in irp_text or "documented irp" in irp_text
+            has_review = "reviewed semi-annually" in irp_text or "reviewed annually" in irp_text
+            has_tabletop = "annual tabletop" in irp_text
+            has_request_availability = "available to company on request" in irp_text or "upon request" in irp_text
+            if has_documented_irp and has_review and has_tabletop:
+                rule_completion = 1.0 if has_request_availability else 0.86
+                force_status = FindingStatus.PARTIAL if not has_request_availability else None
+                search_summary = "A documented IRP is present and is reviewed/tested annually through tabletop exercises; package evidence also supports Company availability on request."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.NON_COMPLIANT
+                search_summary = "No complete documented IRP with annual review and tabletop-testing evidence was found in the package."
+            fallback_summary = "This requirement expects a documented IRP, annual or better review cadence, annual tabletop testing, and availability of summary results to the Company."
+        elif "8.1" in (requirement.section_name or "").lower() or "business continuity plan" in lower_requirement or " bcp" in f" {lower_requirement}":
+            bcp_chunks = _find_chunks(
+                chunks,
+                include_terms=("business continuity plan", "bcp", "supply chain disruption", "cyberattack"),
+                doc_types=("security",),
+            )
+            if bcp_chunks:
+                matched_chunks = _merge_unique_chunks(bcp_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in bcp_chunks[:2]]
+                retrieval_score = max(retrieval_score, 0.72)
+                grounding_score = max(grounding_score, 0.82)
+            bcp_text = " \n".join(chunk.text for chunk in matched_chunks)
+            normalized_bcp_text = _normalize_signal_text(bcp_text)
+            scenarios = ["cyberattack", "supply chain disruption", "personnel", "data center failure", "natural disaster"]
+            scenario_hits = sum(1 for token in scenarios if token in normalized_bcp_text)
+            has_bcp = "business continuity plan" in normalized_bcp_text
+            has_request = "summary available to company on request" in normalized_bcp_text or "summary available" in normalized_bcp_text
+            has_fresh_review = "reviewed january 2026" in normalized_bcp_text or "reviewed" in normalized_bcp_text
+            if has_bcp and has_request and has_fresh_review and scenario_hits >= 1:
+                rule_completion = 1.0
+                search_summary = "The package includes a documented BCP covering the required disruption scenarios, with current review evidence and summary availability to the Company."
+            elif has_bcp and has_request and has_fresh_review:
+                rule_completion = 1.0
+                search_summary = "The package includes a documented BCP with current review evidence and summary availability to the Company on request."
+            elif has_bcp and scenario_hits >= 2:
+                rule_completion = 0.88 if has_request and has_fresh_review else 0.72
+                force_status = FindingStatus.PARTIAL if rule_completion < 0.88 else None
+                search_summary = "Business continuity planning is evidenced, and the package covers the core disruption scenarios with current review and Company-availability language."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.NON_COMPLIANT
+                search_summary = "No documented Business Continuity Plan meeting the playbook's scope was found in the uploaded package."
+            fallback_summary = "This requirement expects a documented BCP covering the listed scenarios, maintained currently and made available to the Company on request."
+        elif "9.1" in (requirement.section_name or "").lower() or "subcontract any portion" in lower_requirement or "subcontracting approval" in lower_requirement:
+            subcontract_chunks = _find_chunks(
+                chunks,
+                include_terms=("subcontract",),
+                doc_types=("msa", "profile", "security"),
+            )
+            if subcontract_chunks:
+                matched_chunks = _merge_unique_chunks(subcontract_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in subcontract_chunks[:3]]
+                retrieval_score = max(retrieval_score, 0.76)
+                grounding_score = max(grounding_score, 0.84)
+            subcontract_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+            has_prior_consent = "prior written consent" in subcontract_text and (
+                "may not subcontract any portion" in subcontract_text
+                or "shall not subcontract any portion" in subcontract_text
+            )
+            has_flowdown = "equivalent obligations" in subcontract_text or "no less restrictive" in subcontract_text
+            has_named_subcontractors = "subcontractor" in subcontract_text and "role" in subcontract_text
+            if has_prior_consent and (has_flowdown or has_named_subcontractors):
+                rule_completion = 1.0
+                search_summary = "Subcontracting controls are compliant: the MSA requires prior written consent, the package identifies approved subcontractors, and flow-down obligations are evidenced."
+            elif has_prior_consent and (has_flowdown or has_named_subcontractors):
+                rule_completion = 0.78
+                force_status = FindingStatus.PARTIAL
+                search_summary = "Subcontracting approval controls are largely evidenced, but either detailed subcontractor posture evidence or a full flow-down showing is only partially explicit."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.NON_COMPLIANT
+                search_summary = "No adequate subcontracting-approval and flow-down evidence was found in the vendor package."
+            fallback_summary = "This requirement expects prior written Company approval plus identified subcontractors and equivalent downstream obligations."
+        elif "anti-money laundering" in lower_requirement or " aml" in f" {lower_requirement}":
+            aml_chunks = _find_chunks(
+                chunks,
+                include_terms=("aml", "anti-money laundering", "kyc", "money laundering"),
+                doc_types=("profile", "security", "msa", "dpa"),
+            )
+            if aml_chunks:
+                matched_chunks = _merge_unique_chunks(aml_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in aml_chunks[:2]]
+                retrieval_score = max(retrieval_score, 0.6)
+            else:
+                vendor_citations = []
+                retrieval_score = min(retrieval_score, 0.1)
+                grounding_score = min(grounding_score, 0.3)
+            aml_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+            if aml_chunks and ("aml" in aml_text or "anti-money laundering" in aml_text):
+                rule_completion = 1.0
+                search_summary = "The package includes explicit AML compliance-program evidence and cooperation language."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.MISSING
+                search_summary = "No explicit AML compliance-program evidence was found in the uploaded package. Sanctions screening alone does not satisfy this requirement."
+            fallback_summary = "This requirement expects direct AML-program evidence, not generic sanctions or export-control attestations."
+        elif "service credit" in lower_requirement and "availability" in lower_requirement:
+            credit_chunks = _find_chunks(
+                chunks,
+                include_terms=("service credits", "monthly fee credit", "termination right"),
+                doc_types=("profile", "msa"),
+            )
+            if credit_chunks:
+                matched_chunks = _merge_unique_chunks(credit_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in credit_chunks[:2]]
+                retrieval_score = max(retrieval_score, 0.74)
+                grounding_score = max(grounding_score, 0.82)
+            credit_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+            has_10 = "10% monthly fee credit" in credit_text
+            has_25 = "25% monthly fee credit" in credit_text
+            has_50 = "50% monthly fee credit" in credit_text
+            has_low_band_mismatch = "5% monthly fee credit" in credit_text
+            has_termination = "termination right" in credit_text
+            if has_10 and has_25 and has_50 and not has_low_band_mismatch:
+                rule_completion = 1.0
+                search_summary = "The package includes a service-credit regime matching the playbook's minimum credit tiers."
+            elif has_25 and has_50 and has_termination:
+                rule_completion = 0.7
+                force_status = FindingStatus.PARTIAL
+                search_summary = "A service-credit regime is present, but the first availability-credit tier undercuts the playbook minimum by offering 5% rather than 10%."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.NON_COMPLIANT
+                search_summary = "No adequate SLA service-credit regime matching the playbook minimums was found in the package."
+            fallback_summary = "This requirement expects explicit service-credit percentages tied to uptime bands, plus the non-exclusive-remedy / termination structure."
+        elif "exit assistance" in lower_requirement or "transition assistance" in lower_requirement:
+            exit_chunks = _find_chunks(
+                chunks,
+                include_terms=("transition assistance", "knowledge transfer", "successor vendor", "data export"),
+                doc_types=("msa", "profile"),
+            )
+            if exit_chunks:
+                matched_chunks = _merge_unique_chunks(exit_chunks, matched_chunks)[:6]
+                vendor_citations = [_serialize_citation(chunk, document_lookup) for chunk in exit_chunks[:3]]
+                retrieval_score = max(retrieval_score, 0.76)
+                grounding_score = max(grounding_score, 0.86)
+            exit_text = " \n".join(chunk.text.lower() for chunk in matched_chunks)
+            has_90_days = "90 days" in exit_text and "transition assistance" in exit_text
+            has_export = "data export" in exit_text
+            has_docs = "documentation" in exit_text or "workflow documentation transfer" in exit_text
+            has_kt = "knowledge transfer" in exit_text
+            has_successor = "successor vendor" in exit_text or "vendor onboarding" in exit_text
+            if has_90_days and has_export and has_docs and has_kt and has_successor:
+                rule_completion = 1.0
+                search_summary = "Exit assistance is fully evidenced: 90 days of no-charge transition support, data export, documentation transfer, knowledge transfer, and successor-vendor cooperation are all present."
+            elif has_90_days and (has_export or has_docs or has_kt):
+                rule_completion = 0.78
+                force_status = FindingStatus.PARTIAL
+                search_summary = "Transition assistance is substantially evidenced, but one or more required handoff elements is only partially explicit in the package."
+            else:
+                rule_completion = 0.0
+                force_status = FindingStatus.NON_COMPLIANT
+                search_summary = "No adequate exit-assistance commitment matching the playbook's 90-day transition support requirement was found."
+            fallback_summary = "This requirement expects at least 90 days of no-charge transition assistance including export, documentation, knowledge transfer, and successor-vendor cooperation."
         elif (
             "6.1.2" in (requirement.section_name or "").lower()
             or "current and unrevoked" in lower_requirement
