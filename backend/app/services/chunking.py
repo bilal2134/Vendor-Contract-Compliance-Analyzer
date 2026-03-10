@@ -40,6 +40,8 @@ def chunk_pages(pages: list[dict], max_chars: int = 1400, overlap: int = 240) ->
                     end = boundary
             text = page_text[start:end].strip()
             if text:
+                if section_name and not text.lower().startswith(section_name.lower()):
+                    text = f"{section_name}\n{text}"
                 chunks.append(
                     {
                         "chunk_index": chunk_index,
