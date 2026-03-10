@@ -21,6 +21,7 @@ class PlaybookVersion(Base):
     source_path: Mapped[str]
     status: Mapped[str]
     requirement_count: Mapped[int] = mapped_column(Integer, default=0)
+    content_hash: Mapped[str | None] = mapped_column(nullable=True)  # SHA-256 of uploaded file bytes
     created_at: Mapped[datetime] = mapped_column(DateTime, default=datetime.utcnow)
 
 

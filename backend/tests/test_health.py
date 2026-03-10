@@ -1,3 +1,5 @@
+import os
+
 from fastapi.testclient import TestClient
 
 from app.main import app
@@ -21,7 +23,12 @@ def test_playbook_and_package_ingestion_flow() -> None:
             "description": "Test playbook",
         },
         files={
-            "file": ("playbook.txt", b"4.2.1 Cyber Liability Vendors must maintain at least $5000000 cyber liability coverage and reference it in the DPA. 5.4.3 Data retention Vendors must document retention and deletion timelines.", "text/plain"),
+            "file": (
+                "playbook.txt",
+                # random salt ensures a unique SHA-256 each test run → no dedup collision
+                os.urandom(8) + b"4.2.1 Cyber Liability Vendors must maintain at least $5000000 cyber liability coverage and reference it in the DPA. 5.4.3 Data retention Vendors must document retention and deletion timelines.",
+                "text/plain",
+            ),
         },
     )
 

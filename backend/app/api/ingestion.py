@@ -41,7 +41,12 @@ async def create_playbook_version(
     file: UploadFile = File(...),
     db: Session = Depends(get_db),
 ) -> CreatePlaybookVersionResponse:
-    result = await ingest_playbook(db, name=name, effective_date=effective_date, description=description, upload=file)
+    try:
+        result = await ingest_playbook(db, name=name, effective_date=effective_date, description=description, upload=file)
+    except ValueError as exc:
+        msg = str(exc)
+        code = status.HTTP_409_CONFLICT if "duplicate" in msg.lower() else status.HTTP_400_BAD_REQUEST
+        raise HTTPException(status_code=code, detail=msg)
     playbook = result["playbook"]
     return CreatePlaybookVersionResponse(
         version_id=playbook.id,
